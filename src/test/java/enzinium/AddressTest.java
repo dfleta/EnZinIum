@@ -1,6 +1,7 @@
 package enzinium;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -13,6 +14,7 @@ public class AddressTest {
     public void constructor_test() {
         Address address = new Address();
         assertNotNull(address);
+        assertEquals(0d, address.getBalance(), 0d);
     }
 
     @Test
