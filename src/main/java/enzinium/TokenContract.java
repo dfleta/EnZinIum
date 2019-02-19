@@ -1,12 +1,16 @@
 package enzinium;
 
+import java.security.PublicKey;
+
 public class TokenContract {
 
+    private PublicKey owner = null;
     private String name = null;
     private String symbol = null;
     private int totalSupply = 0;
 
-    public TokenContract() {
+    public TokenContract(Address owner) {
+        this.owner = owner.getPK();
     }
 
 	public void setName(String name) {
@@ -37,6 +41,9 @@ public class TokenContract {
     public String toString() {
         return "\n" + "name = " + name() + "\n" + 
                       "symbol = " + symbol() + "\n" +
-                      "TotalSupply = " + totalSupply() + "\n";
+                      "totalSupply = " + totalSupply() + "\n" +
+                      "owner = " + this.owner.hashCode() + "\n";
     }
+
+
 }

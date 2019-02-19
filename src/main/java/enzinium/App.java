@@ -31,12 +31,16 @@ public class App
         /**
          * Crea una contrato inteligente de tipo TokenContract en nuestro 
          * sistema para que Rick pueda vender 100 entradas para 
-         * el concierto de "los Ricknillos".
+         * el concierto de "los Ricknillos". 
          *  
          * El nombre del token es Ricknillos
          * Su simbolo es RNiLL
          * 
-         * En la clase TokenContract programa las funciones:
+         * El propietario del contrato es Rick. Asigna su Public Key a la 
+         * propiedad owner del contrato mediante eñ contructor de TokenContract.
+         * 
+         * En la clase TokenContract programa las funciones a utilizar en 
+         * el metodo toString():
          * 
          * name() 
          * @return devuelve el nombre del token de forma human-readable (p.e., “US Dollars”).
@@ -48,7 +52,7 @@ public class App
          * @return el total de unidades de este token que actualmente existen.
          */
 
-        TokenContract ricknillos = new TokenContract();
+        TokenContract ricknillos = new TokenContract(rick);
         ricknillos.setName("Ricknillos");
         ricknillos.setSymbol("RNiLL");
         ricknillos.setTotalSupply(100);
@@ -58,6 +62,11 @@ public class App
         System.out.println(ricknillos.toString());
 
 
+
+        /**
+         * El contrato ToenContract it contains two data structures, one to track balances and one to track allowances. I
+         * The first data mapping implements an internal table of token balances, by owner. This allows the token contract to keep track of who owns the tokens. Each transfer is a deduction from one balance and an addition to another balance:
+         */
 
 
 
