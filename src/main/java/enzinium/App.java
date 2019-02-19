@@ -1,13 +1,21 @@
 package enzinium;
 
 /**
- * Hello world!
+ * enZinium
  *
  */
 public class App 
 {
+     
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        /**
+         * Crea una Address en nuestro sistema para Rick
+         * Genera las claves privada y publica de la direccion
+         */
+        Address rick = new Address();
+        rick.generateKeyPair();
+
+        System.out.println("\n Direccion de Rick: \n" +  rick.getPK().hashCode());
     }
 }
