@@ -13,9 +13,17 @@ public class TokenContract {
 
     private Map<PublicKey, Double> balances = new HashMap<>(); 
 
+    /**
+     * constructor
+     */
+
     public TokenContract(Address owner) {
         this.owner = owner.getPK();
     }
+
+    /**
+     * getters y setters
+     */
 
 	public void setName(String name) {
         this.name = name;
@@ -44,6 +52,22 @@ public class TokenContract {
     public Map<PublicKey, Double> getBalances() {
         return this.balances;
     }
+
+    /**
+     * Override 
+     */
+    
+    @Override
+    public String toString() {
+        return "\n" + "name = " + name() + "\n" + 
+                      "symbol = " + symbol() + "\n" +
+                      "totalSupply = " + totalSupply() + "\n" +
+                      "owner = " + this.owner.hashCode() + "\n";
+    }
+
+    /**
+     * logica
+     */
 
     public void addOwner(PublicKey PK, Double units) {
         getBalances().putIfAbsent(PK, units);
@@ -77,21 +101,10 @@ public class TokenContract {
         }   
     }
 
-    
-    @Override
-    public String toString() {
-        return "\n" + "name = " + name() + "\n" + 
-                      "symbol = " + symbol() + "\n" +
-                      "totalSupply = " + totalSupply() + "\n" +
-                      "owner = " + this.owner.hashCode() + "\n";
-    }
-
     private void require(Boolean holds) throws Exception {
         if (! holds) {
             throw new Exception();
         }
     }
-
-
 
 }
