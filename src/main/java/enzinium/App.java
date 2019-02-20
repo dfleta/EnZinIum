@@ -111,7 +111,8 @@ public class App
          * balanceOf()
          * @param PublicKey del propietario
          * @return cantidad de tokens que posee
-         * Dada una direccion, devuelve su balance de tokens
+         * Dada una direccion, devuelve su balance de tokens. Si no existe 
+         * el propietario, devuelve cero.
          */
         System.out.println("\n" + "Consulta de balances" + "\n" + 
                                   "===================="        );
@@ -163,6 +164,12 @@ public class App
         System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
                                                  + " "
                                                  + ricknillos.symbol());
+        
+        // Morty vuelve a comprar un par de entradas mas
+        ricknillos.transfer(morty.getPK(), 2d);
+        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
+                                                 + " "
+                                                 + ricknillos.symbol());
 
         /**
          * A veces, hay reventa ;)
@@ -192,7 +199,7 @@ public class App
         /**
          * Llega el dia del concierto y Rick quiere
          * controlar el acceso a la sala de conciertos.
-         * Muestra una lista de asistentes con el número de entradas
+         * Muestra una lista de compradores con el número de entradas
          * que han adquirido (excluyendo a Rick).
          * 
          * owners()
@@ -200,8 +207,8 @@ public class App
          *         y el numero de tokens que han adquirido
          */
 
-        System.out.println("\n" + "Lista de asistentes" + "\n" + 
-                                  "==================="        );
+        System.out.println("\n" + "Lista de compradores" + "\n" + 
+                                  "===================="        );
         ricknillos.owners();
         
         /**
