@@ -58,7 +58,13 @@ public class TokenContract {
     }
 
     public void transfer(PublicKey recipient, Double units) {
-       // require(balanceOf() >= units);
+        try {
+            require(balanceOf(owner) >= units);
+            this.getBalances().put(owner, balanceOf(owner) - units);
+            this.getBalances().put(recipient, balanceOf(recipient) + units);
+        } catch (Exception e) {
+            // fails silently
+        }      
     };
     
     @Override
@@ -67,6 +73,12 @@ public class TokenContract {
                       "symbol = " + symbol() + "\n" +
                       "totalSupply = " + totalSupply() + "\n" +
                       "owner = " + this.owner.hashCode() + "\n";
+    }
+
+    private void require(Boolean holds) throws Exception {
+        if (! holds) {
+            throw new Exception();
+        }
     }
 
 
