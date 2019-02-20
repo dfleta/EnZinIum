@@ -32,6 +32,9 @@ public class App {
 
         /**
          * Visualiza la direccion publica de Rick y su balance
+         * 
+         * Utiliza el metodo hashCode() de PublicKey para 
+         * mostrar la PublicKey en consola 
          */
         
         System.out.println("\n" + "Address de Rick" + "\n" + 
@@ -87,8 +90,8 @@ public class App {
         ricknillos.setSymbol("RNiLL");
         ricknillos.setTotalSupply(100);
 
-        System.out.println("\n" + "Contrato de los Rickillos" + "\n" + 
-                                  "========================="        );
+        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" + 
+                                  "=========================="        );
         System.out.println(ricknillos.toString());
 
         /**
@@ -96,9 +99,9 @@ public class App {
          * de token por propietario:
          * mapping(propietario => numero de unidades que posee)
          * Permite al contrato llevar el seguimiento de quien
-         * posee los tokens. 
-         * Cada transferencia es una deducción en un balance 
-         * y una adicion en el otro.
+         * posee las entradas. 
+         * Cada transferencia de entradas entre propietarios es 
+         * una deducción en un balance y una adicion en el otro.
          * 
          * Crea una tabla "balances" que mapee cada propietario 
          * (su Public Key) al numero de tokens que posee.
@@ -133,13 +136,15 @@ public class App {
 
         System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
 
-        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick.getPK()) 
-                                                + " "
-                                                + ricknillos.symbol());
+        System.out.println("Entradas de Rick: " 
+                                + ricknillos.balanceOf(rick.getPK()) 
+                                + " "
+                                + ricknillos.symbol());
 
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
+        System.out.println("Entradas de Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
 
         /**
          * Morty quiere comprarle 2 entradas a Rick
@@ -149,14 +154,15 @@ public class App {
          * @param cantidad de tokens
          * Dada una direccion y una cantidad, transfiere esa cantidad
          * de tokens a esa direccion, desde el balance de la direccion
-         * propietaria del contrato.
-         * LLama a la funcion require() para comprobar si el propietario 
-         * del contrato tiene suficientes tokens. Si no hay suficientes,
-         * falla silenciosamente (no hace nada).
+         * propietaria del contrato (la de Rick en este caso).
          * 
-         * require(condicion)
+         * LLama a la funcion require() para comprobar si el propietario 
+         * del contrato dispone de suficientes tokens. Si no hay suficientes,
+         * falla silenciosamente (no hace nada) y no modifica los balances.
+         * 
+         * require()
          * @param una condicion que ha de verificarse (ser cierta)
-         * lanza una excepcion si no se cumple la condicion
+         * Lanza una EXCEPCION si no se cumple la condicion
          */
 
         System.out.println("\n" + "Transferencia de entradas" + "\n" + 
@@ -164,34 +170,40 @@ public class App {
 
         ricknillos.transfer(morty.getPK(), 2d);
 
-        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick.getPK()) 
-                                                + " "
-                                                + ricknillos.symbol());
+        System.out.println("Entradas de Rick: " 
+                                + ricknillos.balanceOf(rick.getPK()) 
+                                + " "
+                                + ricknillos.symbol());
 
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
+        System.out.println("Entradas de Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
 
         // chequea que require falla si no hay tokens suficientes en el balance de Rick
         ricknillos.transfer(morty.getPK(), 300d);
 
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
+        System.out.println("Rick no tiene 300 entradas => entradas de Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
         
         // Morty vuelve a comprar un par de entradas mas
         ricknillos.transfer(morty.getPK(), 2d);
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
+
+        System.out.println("2 entradas mas para Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
 
         /**
          * A veces, hay reventa ;)
          * 
-         * Dado un remitente, un destinatario, y una cantidad, 
-         * transfiere tokens de una cuenta a la otra.
          * Morty le vende 1 entrada a Jen.
-         *  
+         * 
+         * Dado un remitente, un destinatario, y una cantidad, 
+         * se transfieren tokens de una direccion a la otra.
+         *   
          * transfer()
          * @param sender PK
          * @param recipient PK
@@ -203,12 +215,14 @@ public class App {
         
         ricknillos.transfer(morty.getPK(), jen.getPK(), 1d);
 
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
-        System.out.println("Entradas de Jen: " + ricknillos.balanceOf(jen.getPK())
-                                                 + " "
-                                                 + ricknillos.symbol());
+        System.out.println("Entradas de Morty: " 
+                                + ricknillos.balanceOf(morty.getPK())
+                                + " "
+                                + ricknillos.symbol());
+        System.out.println("Entradas de Jen: " 
+                                + ricknillos.balanceOf(jen.getPK())
+                                + " "
+                                + ricknillos.symbol());
 
         /**
          * Llega el dia del concierto y Rick quiere

@@ -65,7 +65,7 @@ public class TokenContract {
         return "\n" + "name = " + name() + "\n" + 
                       "symbol = " + symbol() + "\n" +
                       "totalSupply = " + totalSupply() + "\n" +
-                      "owner = " + this.owner.hashCode() + "\n";
+                      "owner PK = " + this.owner.hashCode() + "\n";
     }
 
     /**

@@ -1,6 +1,5 @@
 package enzinium;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
