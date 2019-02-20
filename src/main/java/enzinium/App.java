@@ -189,6 +189,20 @@ public class App
                                                  + " "
                                                  + ricknillos.symbol());
 
+        /**
+         * Llega el dia del concierto y Rick quiere
+         * controlar el acceso a la sala de conciertos.
+         * Muestra una lista de asistentes con el número de entradas
+         * que han adquirido.
+         * 
+         * owners()
+         * @return muestra en consola la PublicKey de los compradores
+         *         y el numero de tokens que han adquirido
+         */
 
+        System.out.println("\n" + "Lista de asistentes" + "\n" + 
+                                  "==================="        );
+        ricknillos.owners();
+        
     }
 }

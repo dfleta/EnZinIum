@@ -41,7 +41,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "\n" + "Rick = " + getPK().hashCode() + "\n" + 
+        return "\n" + "PK = " + getPK().hashCode() + "\n" + 
                       "Balance = " + getBalance() + "\n";
     }
 
