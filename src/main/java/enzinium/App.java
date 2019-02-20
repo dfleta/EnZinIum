@@ -18,15 +18,24 @@ public class App
         Address rick = new Address();
         rick.generateKeyPair();
 
-        System.out.println("\n" + "Direccion de Rick: \n" +  rick.getPK().hashCode());
-
-         /**
-         * Visualiza la direccion de Rick
+        /**
+         * Visualiza la direccion de Rick y su balance
          */
         
-        System.out.println("\n" + "Ver Address de Rick" + "\n" + 
-                                  "==================="        );
+        System.out.println("\n" + "Address de Rick" + "\n" + 
+                                  "==============="        );
         System.out.println(rick.toString());
+
+        /**
+         * Creamos una Address en nuestro sistema para Morty
+         * y visualizamos su direccion y balance
+         */
+        
+        Address morty = new Address();
+        morty.generateKeyPair();
+        System.out.println("\n" + "Address de Morty" + "\n" + 
+                                  "==============="        );
+        System.out.println(morty.toString());        
 
         /**
          * Crea una contrato inteligente de tipo TokenContract en nuestro 
@@ -57,16 +66,35 @@ public class App
         ricknillos.setSymbol("RNiLL");
         ricknillos.setTotalSupply(100);
 
-        System.out.println("\n" + "Ver contrato de los Rickillos" + "\n" + 
-                                  "============================="        );
+        System.out.println("\n" + "Contrato de los Rickillos" + "\n" + 
+                                  "========================="        );
         System.out.println(ricknillos.toString());
 
-
-
         /**
-         * El contrato ToenContract it contains two data structures, one to track balances and one to track allowances. I
-         * The first data mapping implements an internal table of token balances, by owner. This allows the token contract to keep track of who owns the tokens. Each transfer is a deduction from one balance and an addition to another balance:
+         * El contrato TokenContract contiene una tabla de balances 
+         * de token por propietario:
+         * mapping(propietario => numero de unidades que posee)
+         * Permite al contrato llevar el seguimiento de quien
+         * posee los tokens. 
+         * Cada transferencia es una deducción en un balance 
+         * y una adicion en el otro.
+         * 
+         * Crea una tabla "balances" que mapee cada propietario 
+         * (su Public Key) al numero de tokens que posee.
+         * Añade a Rick con sus 100 entradas y a Morty con cero.
+         * Asegurate de que si el propietario (su Public Key) 
+         * ya existe en la tabla, sus unidades no se actualicen.
+         * 
+         * addOwner()
+         * @param address del propietario
+         * @param unidades
          */
+
+        ricknillos.addOwner(rick, 100d);
+        ricknillos.addOwner(morty, 0d);
+        // chequea que Morty no se actualiza a 500 unidades
+        ricknillos.addOwner(morty, 500d);
+        
 
 
 
