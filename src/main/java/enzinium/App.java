@@ -112,11 +112,11 @@ public class App
 
         System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
 
-        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick) 
+        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick.getPK()) 
                                                 + " "
                                                 + ricknillos.symbol());
 
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty)
+        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
                                                  + " "
                                                  + ricknillos.symbol());
 
@@ -131,7 +131,7 @@ public class App
          * @param cantidad de tokens
          */
 
-        ricknillos.transfer(morty, 2d);
+        ricknillos.transfer(morty.getPK(), 2d);
 
         /**
          * transferFrom() reventa ;)

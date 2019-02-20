@@ -53,12 +53,12 @@ public class TokenContract {
         return this.getBalances().size();
     }
 
-    public Double balanceOf(Address owner) {
-        return this.getBalances().get(owner.getPK());
+    public Double balanceOf(PublicKey owner) {
+        return this.getBalances().get(owner);
     }
 
-    public void transfer(Address recipient, Double units) {
-       // require(balanceOf(owner) >= units);
+    public void transfer(PublicKey recipient, Double units) {
+       // require(balanceOf() >= units);
     };
     
     @Override
@@ -68,6 +68,7 @@ public class TokenContract {
                       "totalSupply = " + totalSupply() + "\n" +
                       "owner = " + this.owner.hashCode() + "\n";
     }
+
 
 
 }
