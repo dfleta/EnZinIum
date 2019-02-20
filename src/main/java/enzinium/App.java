@@ -88,20 +88,19 @@ public class App
          * 
          * Crea una tabla "balances" que mapee cada propietario 
          * (su Public Key) al numero de tokens que posee.
-         * Añade a Rick con sus 100 entradas y a Morty con cero.
+         * Añade a Rick con sus 100 entradas.
          * Asegurate de que si el propietario (su Public Key) 
          * ya existe en la tabla, sus unidades no se actualicen.
          * 
          * addOwner()
-         * añade un propietario y sus tokens
+         * añade el propietario inicial de todos los tokens de este contrato
          * @param PublicKey del propietario
          * @param cantidad de tokens que posee
          */
 
-        ricknillos.addOwner(rick.getPK(), 100d);
-        ricknillos.addOwner(morty.getPK(), 0d);
-        // chequea que Morty no se actualiza a 500 unidades
-        ricknillos.addOwner(morty.getPK(), 500d);
+        ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+        // chequea que Rick no se actualiza a 500 unidades
+        ricknillos.addOwner(rick.getPK(), 500d);
         
         /**
          * Consulta los balances
@@ -158,13 +157,12 @@ public class App
                                                  + " "
                                                  + ricknillos.symbol());
 
+        // chequea que require falla si no hay tokens suficientes en el balance de Rick
         ricknillos.transfer(morty.getPK(), 300d);
 
         System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
                                                  + " "
                                                  + ricknillos.symbol());
-
-
 
         /**
          * A veces, hay reventa ;)
