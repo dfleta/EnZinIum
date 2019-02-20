@@ -110,8 +110,12 @@ public class App
 
         System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
 
-        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick));
-        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty));
+        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick) 
+                                                + " "
+                                                + ricknillos.symbol());
+        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty)
+                                                 + " "
+                                                 + ricknillos.symbol());
 
 
 
