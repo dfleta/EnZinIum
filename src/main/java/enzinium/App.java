@@ -3,20 +3,20 @@ package enzinium;
 /**
  * Contratos inteligentes con enZinium.
  * 
- * Rick va a organizar un concieto de Los Ricknillos.
- * Quiere poner a la venta 100 entradas.
- * Va a utilizar un contrato inteligente construido 
- * sobre nuestra plataforma enZinium.
- * Este contrato recibira instrucciones de a quien vender
+ * Rick va a organizar un concieto de Los Ricknillos
+ * y quiere poner a la venta 100 entradas en nuestra
+ * plataforma enZinium.
+ * Para ello va a utilizar un contrato inteligente 
+ * construido sobre nuestra plataforma.
+ * Este contrato recibira instrucciones sobre a quien vender
  * las entradas. El contrato almacenara que usuarios/as 
  * de la plataforma poseen las entradas.
  * Cada usuario/a dipone de una Address /direccion en la
  * plataforma, desde la que gestionar sus enZiniums 
  * y las entradas.
- *
  */
-public class App 
-{
+
+public class App {
      
     public static void main( String[] args )
     {
@@ -282,6 +282,9 @@ public class App
 
         morty.send(ricknillos, 10d);
         ricknillos.owners();
+        System.out.println("Owner: " + rick.getPK().hashCode() + " " 
+                                     + ricknillos.balanceOf(rick.getPK())
+                                     + ricknillos.symbol());
 
         System.out.println("\n" + "Address de Rick" + "\n" + 
                                   "==============="        );
