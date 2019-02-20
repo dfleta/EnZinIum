@@ -87,7 +87,7 @@ public class App
          * 
          * addOwner()
          * @param address del propietario
-         * @param unidades
+         * @param cantidad de tokens que posee
          */
 
         ricknillos.addOwner(rick, 100d);
@@ -95,6 +95,24 @@ public class App
         // chequea que Morty no se actualiza a 500 unidades
         ricknillos.addOwner(morty, 500d);
         
+        /**
+         * Consulta los balances
+         * 
+         * numOwners()
+         * @return numero de propietarios registrados en la tabla balances
+         * 
+         * balanceOf()
+         * @param address del propietario
+         * @return cantidad de tokens que posee
+         */
+        System.out.println("\n" + "Consulta de balances" + "\n" + 
+                                  "===================="        );
+
+        System.out.println("\n" + "Numero de propietarios: " + ricknillos.numOwners());
+
+        System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick));
+        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty));
+
 
 
 

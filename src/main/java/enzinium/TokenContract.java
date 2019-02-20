@@ -52,6 +52,10 @@ public class TokenContract {
     public int numOwners() {
         return this.getBalances().size();
     }
+
+    public Double balanceOf(Address owner) {
+        return this.getBalances().get(owner.getPK());
+    }
     
     @Override
     public String toString() {
