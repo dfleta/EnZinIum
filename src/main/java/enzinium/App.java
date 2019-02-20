@@ -116,7 +116,7 @@ public class App {
          */
 
         ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
-        // chequea que Rick no se actualiza a 500 unidades
+        // verifica que Rick no se actualiza una vez que ya existe en el balance
         ricknillos.addOwner(rick.getPK(), 500d);
         
         /**
@@ -180,7 +180,7 @@ public class App {
                                 + " "
                                 + ricknillos.symbol());
 
-        // chequea que require falla si no hay tokens suficientes en el balance de Rick
+        // verifica que require falla si no hay tokens suficientes en el balance de Rick
         ricknillos.transfer(morty.getPK(), 300d);
 
         System.out.println("Rick no tiene 300 entradas => entradas de Morty: " 
@@ -247,7 +247,14 @@ public class App {
          * @return numero de tokens (entradas) vendidos
          */
 
-        System.out.println("\n" + "Total de asistentes: " + ricknillos.totalTokensSold() + "\n");
+        System.out.println("\n" + "Total de asistentes: " 
+                                    + ricknillos.totalTokensSold() + "\n");
+
+        
+        /**
+         * AHORA A POR EL EXCEL·LENT !!
+         * CAN DO !!
+         */
 
         /**
          * Vamos a comprar entradas con nuestra moneda enZinium.
@@ -260,8 +267,8 @@ public class App {
 
         morty.addEZI(20d);
 
-        System.out.println("\n" + "Address de Morty" + "\n" + 
-                                  "==============="        );
+        System.out.println("\n" + "Recarga eZis de Morty" + "\n" + 
+                                  "====================="        );
         System.out.println(morty.toString());
 
         /** 
@@ -276,7 +283,7 @@ public class App {
          * al contrato (¡si la direccion dispone de suficientes enziniums!)
          * y actualiza el balance de Morty
          * 
-         * Esta funcion llama a la funcion payable del contrato:
+         * La funcion send() llama a la funcion payable() del contrato:
          * 
          * payable()
          * @param direccion del receptor de los tokens /entradas
@@ -288,16 +295,18 @@ public class App {
          * del contrato).
          * 
          * Finalmente, la funcion payable() del contrato le envia
-         * los enZinium a Rick mediante la funcion transfer() de Address:
+         * los enZinium al propietario del contrato (Rick) mediante
+         * la funcion transfer() de Address:
          * 
-         * transfer()
+         * transferEZI()
          * @param address del receptor
          * @param cantidad de enZiniums
-         * Actualiza el balance de la dirección del receptor de esos
-         * enZiniums
+         * Actualiza el balance de EZI en la dirección del receptor
+         * de esos enZiniums
          */
 
         morty.send(ricknillos, 10d);
+
         ricknillos.owners();
         System.out.println("Owner: " + rick.getPK().hashCode() + " " 
                                      + ricknillos.balanceOf(rick.getPK())
@@ -309,7 +318,5 @@ public class App {
         System.out.println("\n" + "Address de Morty" + "\n" + 
                                   "==============="        );
         System.out.println(morty.toString());
-
-
     }
 }

@@ -44,7 +44,7 @@ public class Address {
         this.balance += enziniums;
     }
 
-    public void transfer(double enziniums) {
+    public void transferEZI(double enziniums) {
         this.balance += enziniums;
     }
 

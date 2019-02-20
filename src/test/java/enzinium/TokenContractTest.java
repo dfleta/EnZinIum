@@ -60,7 +60,28 @@ public class TokenContractTest {
 
         // require falla silenciosamente
         ricknillos.transfer(morty.getPK(), 500d);
-        assertEquals(2d, ricknillos.balanceOf(morty.getPK()), 0d);
-        
+        assertEquals(2d, ricknillos.balanceOf(morty.getPK()), 0d);   
     }
+
+    @Test
+    public void payable_test() {
+
+        Address rick = new Address();
+        rick.generateKeyPair();
+        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos.addOwner(rick.getPK(), 100d);
+        Address morty = new Address();
+        morty.generateKeyPair();
+
+        morty.addEZI(20d);
+
+        // verifico la transferencia de entradas
+        ricknillos.payable(morty.getPK(), morty.getBalance());
+        assertEquals(4d, ricknillos.balanceOf(morty.getPK()), 0d);   
+
+        // verifico la trasnferencias de EZI
+        assertEquals(20d, ricknillos.owner().getBalance(), 0d);
+    }
+
+
 }

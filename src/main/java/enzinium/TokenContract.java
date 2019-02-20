@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class TokenContract {
 
-    private PublicKey owner = null;
-    private Address manager = null;
+    private PublicKey ownerPK = null;
+    private Address owner = null;
     private String name = null;
     private String symbol = null;
     private double totalSupply = 0d;
@@ -20,8 +20,8 @@ public class TokenContract {
      */
 
     public TokenContract(Address owner) {
-        this.manager = owner;
-        this.owner = owner.getPK();
+        this.owner = owner;
+        this.ownerPK = owner.getPK();
     }
 
     /**
@@ -39,6 +39,10 @@ public class TokenContract {
 	public void setTotalSupply(double totalSupply) {
         this.totalSupply = totalSupply;
     };
+
+    public Address owner() {
+        return this.owner;
+    }
 
     public String name() {
         return this.name;
@@ -65,7 +69,7 @@ public class TokenContract {
         return "\n" + "name = " + name() + "\n" + 
                       "symbol = " + symbol() + "\n" +
                       "totalSupply = " + totalSupply() + "\n" +
-                      "owner PK = " + this.owner.hashCode() + "\n";
+                      "owner PK = " + this.ownerPK.hashCode() + "\n";
     }
 
     /**
@@ -86,8 +90,8 @@ public class TokenContract {
 
     public void transfer(PublicKey recipient, Double units) {
         try {
-            require(balanceOf(owner) >= units);
-            this.getBalances().compute(owner, (pk, tokens) -> tokens - units);
+            require(balanceOf(ownerPK) >= units);
+            this.getBalances().compute(ownerPK, (pk, tokens) -> tokens - units);
             this.getBalances().put(recipient, balanceOf(recipient) + units);
         } catch (Exception e) {
             // fails silently
@@ -112,7 +116,7 @@ public class TokenContract {
 
     public void owners() {
         for (PublicKey pk : this.getBalances().keySet()) {
-            if (!pk.equals(this.owner)) {
+            if (!pk.equals(this.ownerPK)) {
                 System.out.println("Owner: " + pk.hashCode() + " " 
                                              + getBalances().get(pk) + " "
                                              + this.symbol());
@@ -122,7 +126,7 @@ public class TokenContract {
 
     public int totalTokensSold() {
         this.getBalances().forEach((pk, units) -> this.totalTokensSold += units);
-        this.totalTokensSold -= balanceOf(owner);
+        this.totalTokensSold -= balanceOf(ownerPK);
         return this.totalTokensSold.intValue();
     }
 
@@ -132,7 +136,7 @@ public class TokenContract {
             require(enziniums >= tokenPrice);
             Double units = enziniums / tokenPrice;
             transfer(recipient, units);
-            this.manager.transfer(enziniums);
+            this.owner.transferEZI(enziniums);
         } catch (Exception e) {
             // fail silently
         }
