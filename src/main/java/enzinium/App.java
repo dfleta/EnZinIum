@@ -28,14 +28,21 @@ public class App
 
         /**
          * Creamos una Address en nuestro sistema para Morty
-         * y visualizamos su direccion y balance
+         * y otra para Jen y visualizamos su direccion y balance
          */
         
         Address morty = new Address();
         morty.generateKeyPair();
+
+        Address jen = new Address();
+        jen.generateKeyPair();
+
         System.out.println("\n" + "Address de Morty" + "\n" + 
                                   "==============="        );
-        System.out.println(morty.toString());        
+        System.out.println(morty.toString());  
+        System.out.println("\n" + "Address de Jen" + "\n" + 
+                                  "==============="        );
+        System.out.println(jen.toString());         
 
         /**
          * Crea una contrato inteligente de tipo TokenContract en nuestro 
@@ -161,14 +168,29 @@ public class App
 
         /**
          * A veces, hay reventa ;)
+         * 
          * Dado un remitente, un destinatario, y una cantidad, 
          * transfiere tokens de una cuenta a la otra.
+         * Morty le vende 1 entrada a Jen.
          *  
-         * transferFrom()
+         * transfer()
          * @param sender PK
          * @param recipient PK
          * @param cantidad de tokens
          */
+
+        System.out.println("\n" + "Reventa de entradas" + "\n" + 
+                                  "==================="        );
+        
+        ricknillos.transfer(morty.getPK(), jen.getPK(), 1d);
+
+        System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty.getPK())
+                                                 + " "
+                                                 + ricknillos.symbol());
+        System.out.println("Entradas de Jen: " + ricknillos.balanceOf(jen.getPK())
+                                                 + " "
+                                                 + ricknillos.symbol());
+
 
     }
 }

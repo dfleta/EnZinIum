@@ -54,18 +54,29 @@ public class TokenContract {
     }
 
     public Double balanceOf(PublicKey owner) {
-        return this.getBalances().get(owner);
+        return this.getBalances().getOrDefault(owner, 0d);
     }
 
     public void transfer(PublicKey recipient, Double units) {
         try {
             require(balanceOf(owner) >= units);
-            this.getBalances().put(owner, balanceOf(owner) - units);
+            this.getBalances().compute(owner, (pk, tokens) -> tokens - units);
             this.getBalances().put(recipient, balanceOf(recipient) + units);
         } catch (Exception e) {
             // fails silently
         }      
     };
+
+    public void transfer(PublicKey sender, PublicKey recipient, Double units) {
+        try {
+            require(balanceOf(sender) >= units);
+            this.getBalances().put(sender, balanceOf(sender) - units);
+            this.getBalances().put(recipient, balanceOf(recipient) + units);
+        } catch (Exception e) {
+            // fails silently
+        }   
+    }
+
     
     @Override
     public String toString() {
