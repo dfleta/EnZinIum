@@ -193,7 +193,7 @@ public class App
          * Llega el dia del concierto y Rick quiere
          * controlar el acceso a la sala de conciertos.
          * Muestra una lista de asistentes con el número de entradas
-         * que han adquirido.
+         * que han adquirido (excluyendo a Rick).
          * 
          * owners()
          * @return muestra en consola la PublicKey de los compradores
@@ -204,5 +204,14 @@ public class App
                                   "==================="        );
         ricknillos.owners();
         
+        /**
+         * Calcula el numero de asistentes al concierto (excluyendo a Rick),
+         * es decir, el numero de entradas vendidas.
+         * 
+         * totalTokensSold()
+         * @return numero de tokens (entradas) vendidos
+         */
+
+        System.out.println("\n" + "Total de asistentes: " + ricknillos.totalTokensSold() + "\n");
     }
 }

@@ -10,6 +10,7 @@ public class TokenContract {
     private String name = null;
     private String symbol = null;
     private double totalSupply = 0d;
+    private Double totalTokensSold = 0d;
 
     private Map<PublicKey, Double> balances = new HashMap<>(); 
 
@@ -111,10 +112,15 @@ public class TokenContract {
         for (PublicKey pk : this.getBalances().keySet()) {
             if (!pk.equals(this.owner)) {
                 System.out.println("Owner: " + pk.hashCode() + " " 
-                                            + getBalances().get(pk) + " "
-                                            + this.symbol());
+                                             + getBalances().get(pk) + " "
+                                             + this.symbol());
             }
         }
     }
 
+    public int totalTokensSold() {
+        this.getBalances().forEach((pk, units) -> this.totalTokensSold += units);
+        this.totalTokensSold -= balanceOf(owner);
+        return this.totalTokensSold.intValue();
+    }
 }
