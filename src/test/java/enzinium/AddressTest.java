@@ -32,16 +32,16 @@ public class AddressTest {
         Address rick = new Address();
         rick.generateKeyPair();
         TokenContract ricknillos = new TokenContract(rick);
-        ricknillos.addOwner(rick, 100d);
+        ricknillos.addOwner(rick.getPK(), 100d);
         assertEquals(1, ricknillos.getBalances().size());
 
         Address morty = new Address();
         morty.generateKeyPair(); 
-        ricknillos.addOwner(morty, 0d);
+        ricknillos.addOwner(morty.getPK(), 0d);
         assertEquals(2, ricknillos.getBalances().size());
 
         assertEquals(100, ricknillos.getBalances().get(rick.getPK()), 0d);
-        ricknillos.addOwner(rick, 500d);
+        ricknillos.addOwner(rick.getPK(), 500d);
         assertEquals(100, ricknillos.getBalances().get(rick.getPK()), 0d);
     }
 

@@ -86,14 +86,15 @@ public class App
          * ya existe en la tabla, sus unidades no se actualicen.
          * 
          * addOwner()
+         * añade un propietario y sus tokens
          * @param address del propietario
          * @param cantidad de tokens que posee
          */
 
-        ricknillos.addOwner(rick, 100d);
-        ricknillos.addOwner(morty, 0d);
+        ricknillos.addOwner(rick.getPK(), 100d);
+        ricknillos.addOwner(morty.getPK(), 0d);
         // chequea que Morty no se actualiza a 500 unidades
-        ricknillos.addOwner(morty, 500d);
+        ricknillos.addOwner(morty.getPK(), 500d);
         
         /**
          * Consulta los balances
@@ -102,6 +103,7 @@ public class App
          * @return numero de propietarios registrados en la tabla balances
          * 
          * balanceOf()
+         * dada una direccion, devuelve su balance de tokens
          * @param address del propietario
          * @return cantidad de tokens que posee
          */
@@ -113,12 +115,27 @@ public class App
         System.out.println("Entradas de Rick: " + ricknillos.balanceOf(rick) 
                                                 + " "
                                                 + ricknillos.symbol());
+
         System.out.println("Entradas de Morty: " + ricknillos.balanceOf(morty)
                                                  + " "
                                                  + ricknillos.symbol());
 
+        /**
+         * Morty quiere comprarle 2 entradas a Rick
+         * 
+         * transfer()
+         * dada una direccion y una cantidad transfiere esa cantidad
+         * de tokens a esa direccion, desde el balance de la direccion
+         * propietaria del contrato.
+         * @param address 
+         * @param cantidad de tokens
+         */
 
+        ricknillos.transfer(morty, 2d);
 
+        /**
+         * transferFrom() reventa ;)
+         */
 
     }
 }

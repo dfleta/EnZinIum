@@ -45,8 +45,8 @@ public class TokenContract {
         return this.balances;
     }
 
-    public void addOwner(Address owner, Double units) {
-        getBalances().putIfAbsent(owner.getPK(), units);
+    public void addOwner(PublicKey PK, Double units) {
+        getBalances().putIfAbsent(PK, units);
     }
 
     public int numOwners() {
@@ -56,6 +56,10 @@ public class TokenContract {
     public Double balanceOf(Address owner) {
         return this.getBalances().get(owner.getPK());
     }
+
+    public void transfer(Address recipient, Double units) {
+       // require(balanceOf(owner) >= units);
+    };
     
     @Override
     public String toString() {
