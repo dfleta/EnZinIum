@@ -31,7 +31,7 @@ public class App {
         rick.generateKeyPair();
 
         /**
-         * Visualiza la direccion de Rick y su balance
+         * Visualiza la direccion publica de Rick y su balance
          */
         
         System.out.println("\n" + "Address de Rick" + "\n" + 
@@ -40,7 +40,8 @@ public class App {
 
         /**
          * Creamos una Address en nuestro sistema para Morty
-         * y otra para Jen y visualizamos su direccion y balance
+         * y otra para Jen y visualizamos su direccion puvlica
+         * y balance
          */
         
         Address morty = new Address();
@@ -57,15 +58,16 @@ public class App {
         System.out.println(jen.toString());         
 
         /**
-         * Crea una contrato inteligente de tipo TokenContract en nuestro 
-         * sistema para que Rick pueda vender 100 entradas para 
-         * el concierto de "los Ricknillos". 
+         * Crea una contrato inteligente de tipo TokenContract 
+         * en nuestro sistema para que Rick pueda vender 100 
+         * entradas para el concierto de "los Ricknillos". 
          *  
-         * El nombre del token es Ricknillos
-         * Su simbolo es RNiLL
+         * El nombre del token (las entradas) es Ricknillos.
+         * Su simbolo es RNiLL.
          * 
-         * El propietario del contrato es Rick. Asigna su Public Key a la 
-         * propiedad owner del contrato mediante eñ contructor de TokenContract.
+         * El propietario del contrato es Rick. Asigna su Public Key
+         * a la propiedad owner del contrato mediante el contructor
+         * de TokenContract.
          * 
          * En la clase TokenContract programa las funciones a utilizar en 
          * el metodo toString():
