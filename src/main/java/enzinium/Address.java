@@ -9,6 +9,7 @@ public class Address {
     private PublicKey PK = null;
     private PrivateKey SK = null;
     private double balance = 0d;
+    private String symbol = "EZI";
 
     public Address() {
     }
@@ -57,7 +58,8 @@ public class Address {
     @Override
     public String toString() {
         return "\n" + "PK = " + getPK().hashCode() + "\n" + 
-                      "Balance = " + getBalance() + "\n";
+                      "Balance = " + getBalance() + " " 
+                      + this.symbol + "\n";
     }
 
 }
