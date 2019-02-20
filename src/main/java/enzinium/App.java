@@ -1,7 +1,18 @@
 package enzinium;
 
 /**
- * enZinium
+ * Contratos inteligentes con enZinium.
+ * 
+ * Rick va a organizar un concieto de Los Ricknillos.
+ * Quiere poner a la venta 100 entradas.
+ * Va a utilizar un contrato inteligente construido 
+ * sobre nuestra plataforma enZinium.
+ * Este contrato recibira instrucciones de a quien vender
+ * las entradas. El contrato almacenara que usuarios/as 
+ * de la plataforma poseen las entradas.
+ * Cada usuario/a dipone de una Address /direccion en la
+ * plataforma, desde la que gestionar sus enZiniums 
+ * y las entradas.
  *
  */
 public class App 
@@ -220,5 +231,65 @@ public class App
          */
 
         System.out.println("\n" + "Total de asistentes: " + ricknillos.totalTokensSold() + "\n");
+
+        /**
+         * Vamos a comprar entradas con nuestra moneda enZinium.
+         * 
+         * Añade 20 enZiniums a la direccion de Morty:
+         * 
+         * addEZI()
+         * @param cantidad de enziniums
+         */
+
+        morty.addEZI(20d);
+
+        System.out.println("\n" + "Address de Morty" + "\n" + 
+                                  "==============="        );
+        System.out.println(morty.toString());
+
+        /** 
+         * Morty Compra 2 entradas a 5 enZiniums cada una:
+         * envia una transferencia al contrato de ricknillo 
+         * por valor de 10 enZiniums:
+         * 
+         * send()
+         * @param contrato
+         * @param enziniums
+         * Esta funcion envia esa cantidad de enziniums
+         * al contrato (¡si la direccion dispone de suficientes enziniums!)
+         * y actualiza el balance de Morty
+         * 
+         * Esta funcion llama a la funcion payable del contrato:
+         * 
+         * payable()
+         * @param direccion del receptor de los tokens /entradas
+         * @param cantidad de enziniums
+         * Esta funcion calcula cuantas entradas se pueden comprar 
+         * con esa cantidad de enziniums y llama a la funcion
+         * transfer() del contrato para actualizar los balances 
+         * de Morty (el receptor) y Rick (el vendedor, propietario
+         * del contrato).
+         * 
+         * Finalmente, la funcion payable() del contrato le envia
+         * los enZinium a Rick mediante la funcion transfer() de Address:
+         * 
+         * transfer()
+         * @param address del receptor
+         * @param cantidad de enZiniums
+         * Actualiza el balance de la dirección del receptor de esos
+         * enZiniums
+         */
+
+        morty.send(ricknillos, 10d);
+        ricknillos.owners();
+
+        System.out.println("\n" + "Address de Rick" + "\n" + 
+                                  "==============="        );
+        System.out.println(rick.toString());
+        System.out.println("\n" + "Address de Morty" + "\n" + 
+                                  "==============="        );
+        System.out.println(morty.toString());
+
+
     }
 }

@@ -39,6 +39,21 @@ public class Address {
         this.setPK(pair.getPublic());
     }
 
+    public void addEZI(double enziniums) {
+        this.balance += enziniums;
+    }
+
+    public void transfer(double enziniums) {
+        this.balance += enziniums;
+    }
+
+    public void send(TokenContract contract, Double enziniums) {
+        if (enziniums <= this.balance) {
+            contract.payable(getPK(), enziniums);
+            this.balance -= enziniums;
+        }
+    }
+
     @Override
     public String toString() {
         return "\n" + "PK = " + getPK().hashCode() + "\n" + 

@@ -7,6 +7,7 @@ import java.util.Map;
 public class TokenContract {
 
     private PublicKey owner = null;
+    private Address manager = null;
     private String name = null;
     private String symbol = null;
     private double totalSupply = 0d;
@@ -19,6 +20,7 @@ public class TokenContract {
      */
 
     public TokenContract(Address owner) {
+        this.manager = owner;
         this.owner = owner.getPK();
     }
 
@@ -122,5 +124,17 @@ public class TokenContract {
         this.getBalances().forEach((pk, units) -> this.totalTokensSold += units);
         this.totalTokensSold -= balanceOf(owner);
         return this.totalTokensSold.intValue();
+    }
+
+    public void payable(PublicKey recipient, Double enziniums) {
+        Double tokenPrice = 5d; 
+        try {
+            require(enziniums >= tokenPrice);
+            Double units = enziniums / tokenPrice;
+            transfer(recipient, units);
+            this.manager.transfer(enziniums);
+        } catch (Exception e) {
+            // fail silently
+        }
     }
 }

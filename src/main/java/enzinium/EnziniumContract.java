@@ -1,12 +1,13 @@
-// Our first contract is a faucet!
-/**
-contract Faucet {
+/*
+package enzinium;
 
-	address owner;
+public class EnziniumContract {
+
+	private Address owner = null;
 
 	// Contract constructor: set owner
-	constructor() {
-		owner = msg.sender;
+	public EnziniumContract(PublicKey owner) {
+		this.owner = msg.sender;
 	}
 
 	// Contract destructor
