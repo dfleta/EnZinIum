@@ -12,6 +12,7 @@ public class TokenContract {
     private String symbol = null;
     private double totalSupply = 0d;
     private Double totalTokensSold = 0d;
+    private Double tokenPrice = 5d; 
 
     private Map<PublicKey, Double> balances = new HashMap<>(); 
 
@@ -54,6 +55,18 @@ public class TokenContract {
 
     public double totalSupply() {
         return this.totalSupply;
+    }
+
+    public void setTokenPrice(Double tokenPrice) {
+        this.tokenPrice = tokenPrice;
+    }
+
+    public Double getTokenPrice() {
+        return this.tokenPrice;
+    }
+
+    public void setBalances(Map<PublicKey, Double> balances) {
+        this.balances = balances;
     }
 
     public Map<PublicKey, Double> getBalances() {
@@ -131,10 +144,9 @@ public class TokenContract {
     }
 
     public void payable(PublicKey recipient, Double enziniums) {
-        Double tokenPrice = 5d; 
         try {
-            require(enziniums >= tokenPrice);
-            Double units = enziniums / tokenPrice;
+            require(enziniums >= this.getTokenPrice());
+            Double units = Math.ceil(enziniums / tokenPrice);
             transfer(recipient, units);
             this.owner.transferEZI(enziniums);
         } catch (Exception e) {

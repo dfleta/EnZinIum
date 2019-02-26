@@ -78,8 +78,16 @@ public class TokenContractTest {
         // verifico la transferencia de entradas
         ricknillos.payable(morty.getPK(), morty.getBalance());
         assertEquals(4d, ricknillos.balanceOf(morty.getPK()), 0d);   
-
         // verifico la trasnferencia de EZI
+        assertEquals(20d, ricknillos.owner().getBalance(), 0d);
+
+        // sin EZI suficiente
+        ricknillos.payable(morty.getPK(), 4d);
+        assertEquals(4d, ricknillos.balanceOf(morty.getPK()), 0d);
+        assertEquals(20d, ricknillos.owner().getBalance(), 0d);
+
+        ricknillos.payable(morty.getPK(), 8d);
+        assertEquals(5d, ricknillos.balanceOf(morty.getPK()), 0d);
         assertEquals(20d, ricknillos.owner().getBalance(), 0d);
     }
 }
