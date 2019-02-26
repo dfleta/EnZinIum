@@ -261,11 +261,14 @@ public class App {
          * 
          * Añade 20 enZiniums a la direccion de Morty:
          * 
-         * addEZI()
-         * @param cantidad de enziniums
+         * transferEZI()
+         * @param address del receptor
+         * @param cantidad de enZiniums
+         * Añade la cantidad de EZi al balance de EZI en
+         * la dirección del receptor.
          */
 
-        morty.addEZI(20d);
+        morty.transferEZI(20d);
 
         System.out.println("\n" + "Recarga eZis de Morty" + "\n" + 
                                   "====================="        );

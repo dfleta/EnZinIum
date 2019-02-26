@@ -33,7 +33,7 @@ public class AddressTest {
         Address rick = new Address();
         rick.generateKeyPair();
 
-        rick.addEZI(20d);
+        rick.transferEZI(20d);
 
         rick.transferEZI(20d);
 

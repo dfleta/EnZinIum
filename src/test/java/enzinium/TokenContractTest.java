@@ -73,7 +73,7 @@ public class TokenContractTest {
         Address morty = new Address();
         morty.generateKeyPair();
 
-        morty.addEZI(20d);
+        morty.transferEZI(20d);
 
         // verifico la transferencia de entradas
         ricknillos.payable(morty.getPK(), morty.getBalance());

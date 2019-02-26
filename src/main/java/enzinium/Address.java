@@ -40,10 +40,6 @@ public class Address {
         this.setPK(pair.getPublic());
     }
 
-    public void addEZI(double enziniums) {
-        this.balance += enziniums;
-    }
-
     public void transferEZI(double enziniums) {
         this.balance += enziniums;
     }
