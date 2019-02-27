@@ -9,10 +9,10 @@ public class TokenContractTest {
 
     private Address rick = null;
     private Address morty = null;
-    TokenContract ricknillos = null;
+    private TokenContract ricknillos = null;
 
     @Before
-    public void setup_contract() {
+    public void setup_address_y_contract() {
 
         rick = new Address();
         rick.generateKeyPair();
