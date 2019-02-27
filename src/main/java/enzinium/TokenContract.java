@@ -146,7 +146,7 @@ public class TokenContract {
     public void payable(PublicKey recipient, Double enziniums) {
         try {
             require(enziniums >= this.getTokenPrice());
-            Double units = Math.ceil(enziniums / tokenPrice);
+            Double units = Math.floor(enziniums / tokenPrice);
             transfer(recipient, units);
             this.owner.transferEZI(enziniums);
         } catch (Exception e) {

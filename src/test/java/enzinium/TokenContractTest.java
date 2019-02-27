@@ -2,21 +2,31 @@ package enzinium;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TokenContractTest {
 
-    @Test
-    public void addOwner_test() {
+    private Address rick = null;
+    private Address morty = null;
+    TokenContract ricknillos = null;
 
-        Address rick = new Address();
+    @Before
+    public void setup_contract() {
+
+        rick = new Address();
         rick.generateKeyPair();
-        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos = new TokenContract(rick);
         ricknillos.addOwner(rick.getPK(), 100d);
         assertEquals(1, ricknillos.getBalances().size());
 
-        Address morty = new Address();
+        morty = new Address();
         morty.generateKeyPair(); 
+    }
+
+    @Test
+    public void addOwner_test() {
+
         ricknillos.addOwner(morty.getPK(), 0d);
         assertEquals(2, ricknillos.getBalances().size());
 
@@ -27,15 +37,6 @@ public class TokenContractTest {
 
     @Test
     public void balanceOf_test() {
-        
-        Address rick = new Address();
-        rick.generateKeyPair();
-        TokenContract ricknillos = new TokenContract(rick);
-        ricknillos.addOwner(rick.getPK(), 100d);
-        assertEquals(1, ricknillos.getBalances().size());
-
-        Address morty = new Address();
-        morty.generateKeyPair(); 
 
         assertEquals(100d, ricknillos.balanceOf(rick.getPK()), 0d);
         // chequeo getOrDefault(PK, 0d) para direcciones que no existen
@@ -44,15 +45,6 @@ public class TokenContractTest {
 
     @Test
     public void transfer_test() {
-
-        Address rick = new Address();
-        rick.generateKeyPair();
-        TokenContract ricknillos = new TokenContract(rick);
-        ricknillos.addOwner(rick.getPK(), 100d);
-        assertEquals(1, ricknillos.getBalances().size());
-
-        Address morty = new Address();
-        morty.generateKeyPair();
 
         ricknillos.transfer(morty.getPK(), 2d);
         assertEquals(2d, ricknillos.balanceOf(morty.getPK()), 0d);
@@ -65,13 +57,6 @@ public class TokenContractTest {
 
     @Test
     public void payable_test() {
-
-        Address rick = new Address();
-        rick.generateKeyPair();
-        TokenContract ricknillos = new TokenContract(rick);
-        ricknillos.addOwner(rick.getPK(), 100d);
-        Address morty = new Address();
-        morty.generateKeyPair();
 
         morty.transferEZI(20d);
 
@@ -86,8 +71,9 @@ public class TokenContractTest {
         assertEquals(4d, ricknillos.balanceOf(morty.getPK()), 0d);
         assertEquals(20d, ricknillos.owner().getBalance(), 0d);
 
+        // intento de compra de media entrada
         ricknillos.payable(morty.getPK(), 8d);
         assertEquals(5d, ricknillos.balanceOf(morty.getPK()), 0d);
-        assertEquals(20d, ricknillos.owner().getBalance(), 0d);
+        assertEquals(28d, ricknillos.owner().getBalance(), 0d);
     }
 }

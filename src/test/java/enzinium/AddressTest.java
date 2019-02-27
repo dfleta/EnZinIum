@@ -34,10 +34,8 @@ public class AddressTest {
         rick.generateKeyPair();
 
         rick.transferEZI(20d);
-
         rick.transferEZI(20d);
 
         assertEquals(40d, rick.getBalance(), 0d);
     }
-
 }
