@@ -1,9 +1,9 @@
 EZINIUM
 =======
 
-> Contratos inteligentes con enZinium.
+> Contratos inteligentes con EnZinIum.
 
-Rick va a organizar un concierto de Los Ricknillos y quiere poner a la venta 100 entradas en nuestra plataforma enZinium.
+Rick va a organizar un concierto de Los Ricknillos y quiere poner a la venta 100 entradas en nuestra plataforma EnZinIum.
 
 Para ello va a utilizar un contrato inteligente construido sobre nuestra plataforma.
 
@@ -11,7 +11,7 @@ Este contrato recibirá instrucciones sobre a quién vender las entradas.
 
 El contrato almacenará que usuarios/as de la plataforma poseen las entradas.
 
-Cada usuario/a dipone de una `Address` /dirección en la plataforma, desde la que gestionar sus enZiniums y las entradas.
+Cada usuario/a dipone de una `Address` /dirección en la plataforma, desde la que gestionar sus EnZinIums y las entradas.
 
 ## Prepara el proyecto
 
@@ -97,7 +97,7 @@ Todo contrato tiene un propietario.
 * `transfer(PublicKey sender, PublicKey recipient, Double units)` transfiere tokens del sender al recipient.
 * `require(Boolean holds) throws Exception` lanza una excepción cuando holds es `false`.
 * `owners()` mueestra en consola todos los propietarios.
-* `payable(PublicKey recipient, Double enziniums)` envia los tokens a la direccion recipient y envia los enziniums al propietario del contrato.
+* `payable(PublicKey recipient, Double EnZinIums)` envia los tokens a la direccion recipient y envia los EnZinIums al propietario del contrato.
 
 ### Clase `GenSig`
 
