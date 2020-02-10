@@ -3,15 +3,15 @@ EZINIUM
 
 > Contratos inteligentes con enZinium.
 
-Rick va a organizar un concieto de Los Ricknillos y quiere poner a la venta 100 entradas en nuestra plataforma enZinium.
+Rick va a organizar un concierto de Los Ricknillos y quiere poner a la venta 100 entradas en nuestra plataforma enZinium.
 
 Para ello va a utilizar un contrato inteligente construido sobre nuestra plataforma.
 
-Este contrato recibira instrucciones sobre a quien vender las entradas. 
+Este contrato recibirá instrucciones sobre a quién vender las entradas. 
 
-El contrato almacenara que usuarios/as de la plataforma poseen las entradas.
+El contrato almacenará que usuarios/as de la plataforma poseen las entradas.
 
-Cada usuario/a dipone de una `Address` /direccion en la plataforma, desde la que gestionar sus enZiniums y las entradas.
+Cada usuario/a dipone de una `Address` /dirección en la plataforma, desde la que gestionar sus enZiniums y las entradas.
 
 ## Prepara el proyecto
 
@@ -27,11 +27,12 @@ Cada usuario/a dipone de una `Address` /direccion en la plataforma, desde la que
 
 ## Cómo entregar el código
 
- 1. Desde Eclipse exporta el proyecto a un fichero.
- 2. En VSCode, comprime la carpeta del proyecto.
- 3. Envíame el archivo por correo electrónico.
- 4. **Realiza commits periódicamente** mientras avanzas en el desarrollo de la aplicación.
- 5. Realiza un `push` al repo remoto en GitHub **SOLO cuando hayas terminado el proyecto**.
+ 1. Crea un repo privado en tu GitHub y compártelo con el usuario dfleta.
+ 2. Desde Eclipse exporta el proyecto a un fichero.
+ 3. En VSCode, comprime la carpeta del proyecto.
+ 4. Envíame el archivo por correo electrónico.
+ 5. **Realiza commits periódicamente** mientras avanzas en el desarrollo de la aplicación.
+ 6. Realiza un `push` al repo remoto en GitHub **SOLO cuando hayas terminado el proyecto**.
 
 ## Salida de la aplicación
 
@@ -39,26 +40,26 @@ Intenta que la salida del programa sea lo más parecida posible a las imágenes 
 
 ## Historias de usuario
 
-Las hitorias de usuario están enunciadas en el script principal `App.java`
+Las historias de usuario están enunciadas en el script principal `App.java`
 
 Crea un documento donde escribas las historias de usuario correspondientes a los hitos del proceso.
 
 ## Diagrama de clases UML - Opcional
 
-Realiza a mano alzada -o con la aplicación que prefieras- un pequeño diagrama de clases UML que muestre la relación entre las clases que has construido, con su interfaz pública y privada.
+Realiza a mano alzada -o con la aplicación que prefieras- un pequeño diagrama de clases UML que muestre la relación entre las clases que has construído, con su interfaz pública y privada.
 
 ## Código
 
 ### Clase `Address`
 
-Es la **direccion** que cada usuario tiene en nuestro sistema.
+Es la **dirección** que cada usuario tiene en nuestro sistema.
 
 #### Atributos
 
-* `PublicKey PK` es la **calve pública** de la **direccion** desde la que se envían o reciben enziniums.
-* `PrivateKey SK` es la **clave privada** de la **direccion** desde la que se envían o reciben enziniums.
-* `balance` es la cantidad de enzniums que posee esta dirección.
-* `symbol` es el símbolo del enZinium `EZI`
+* `PublicKey PK` es la **clave pública** de la **direccion** desde la que se envían o reciben EnZinIums.
+* `PrivateKey SK` es la **clave privada** de la **direccion** desde la que se envían o reciben EnZinIums.
+* `balance` es la cantidad de EnZinIums que posee esta dirección.
+* `symbol` es el símbolo del EnZinIum: `EZI`.
 
 #### Métodos
 
@@ -85,9 +86,9 @@ Todo contrato tiene un propietario.
 
 #### Métodos
 
-* `name` devuelve el nombre del token de forma  human-readable (p.e., “US Dollars”).
-* `symbol()` devuelve el nombre del símbolo del token de forma human-readable (p.e., “USD”).
-* `totalSupply()` devuelve el total de unidades de este token que actualmente existen
+* `name` devuelve el nombre del token de forma  _human-readable_ (p.e., “US Dollars”).
+* `symbol()` devuelve el nombre del símbolo del token de forma _human-readable_ (p.e., “USD”).
+* `totalSupply()` devuelve el total de unidades de este token que actualmente existen.
 
 * `addOwner(PublicKey PK, Double units)` añade un propietario a `balances`.
 * `numOwners()` devuelve el numero de propietarios en  `balances`

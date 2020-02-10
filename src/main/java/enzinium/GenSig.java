@@ -33,7 +33,7 @@ public class GenSig {
     /**
      * Firma el mensaje que acompaña la transaccion
      * mediante la clave privada de la wallet que 
-     * envia los pigcoins.
+     * envia los EnZinIums.
      */
     public static byte[] sign(PrivateKey sKey, String message) {
         
