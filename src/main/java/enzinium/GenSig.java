@@ -7,7 +7,7 @@ import java.security.PublicKey;
 import java.security.SecureRandom;
 import java.security.Signature;
 
-public class GenSig {
+class GenSig {
 
     /**
      * Genera el par de clave publica PK
@@ -15,7 +15,7 @@ public class GenSig {
      * La clave pública PK es la dirección pública de la Wallet
      * La clave privada SK es necesaria para firmar los mensajes 
      */
-    public static KeyPair generateKeyPair() {
+    static KeyPair generateKeyPair() {
 
         try {
 
@@ -35,7 +35,7 @@ public class GenSig {
      * mediante la clave privada de la wallet que 
      * envia los EnZinIums.
      */
-    public static byte[] sign(PrivateKey sKey, String message) {
+    static byte[] sign(PrivateKey sKey, String message) {
         
         try {
 
@@ -59,7 +59,8 @@ public class GenSig {
      * que corresponde a la clave privada con la que se firmo 
      * el mensaje.
      */
-    public static boolean verify(PublicKey pubKey, String message, byte[] signedMessage) {
+    static boolean verify(PublicKey pubKey, String message, byte[] signedMessage) {
+        
         try {
             // importar la clave publica
             Signature sig = Signature.getInstance("SHA1withDSA", "SUN");
@@ -75,6 +76,5 @@ public class GenSig {
         } catch (Exception e) {
             return false;
         }
-
     }
 }
