@@ -9,20 +9,24 @@ public class Address {
     private PublicKey PK = null;
     private PrivateKey SK = null;
     private double balance = 0d;
-    private String symbol = "EZI";
+    private final String symbol = "EZI";
 
     public Address() {
     }
 
-    public void setSK(PrivateKey sKey) {
+    private void setSK(PrivateKey sKey) {
         this.SK = sKey;
     }
 
-    public PrivateKey getSK() {
+    private PrivateKey getSK() {
         return this.SK;
     }
 
-    public void setPK(PublicKey pKey) {
+    boolean isSKpresent() {
+        return this.getSK() != null ? true : false;
+    }
+
+    private void setPK(PublicKey pKey) {
         this.PK = pKey;
     }
 
@@ -30,7 +34,7 @@ public class Address {
         return this.PK;
     }
 
-    public double getBalance() {
+    double getBalance() {
         return this.balance;
     }
 
@@ -40,7 +44,7 @@ public class Address {
         this.setPK(pair.getPublic());
     }
 
-    public void transferEZI(double enziniums) {
+    void transferEZI(double enziniums) {
         this.balance += enziniums;
     }
 
@@ -57,5 +61,4 @@ public class Address {
                       "Balance = " + getBalance() + " " 
                       + this.symbol + "\n";
     }
-
 }

@@ -23,7 +23,7 @@ public class AddressTest {
         assertNotNull(address);
         address.generateKeyPair();
         assertNotNull(address.getPK());
-        assertNotNull(address.getSK());
+        assertNotNull(address.isSKpresent());
     }
 
 
