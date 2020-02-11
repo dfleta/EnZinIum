@@ -89,6 +89,7 @@ public class App {
         ricknillos.setName("Ricknillos");
         ricknillos.setSymbol("RNiLL");
         ricknillos.setTotalSupply(100);
+        ricknillos.setTokenPrice(5d);
 
         System.out.println("\n" + "Contrato de los Ricknillos" + "\n" + 
                                   "=========================="        );

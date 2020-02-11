@@ -12,9 +12,9 @@ public class TokenContract {
     private String symbol = null;
     private double totalSupply = 0d;
     private Double totalTokensSold = 0d;
-    private Double tokenPrice = 5d; 
+    private Double tokenPrice = 0d; 
 
-    private Map<PublicKey, Double> balances = new HashMap<>(); 
+    private final Map<PublicKey, Double> balances = new HashMap<>(); 
 
     /**
      * constructor
@@ -63,10 +63,6 @@ public class TokenContract {
 
     public Double getTokenPrice() {
         return this.tokenPrice;
-    }
-
-    public void setBalances(Map<PublicKey, Double> balances) {
-        this.balances = balances;
     }
 
     public Map<PublicKey, Double> getBalances() {
@@ -143,7 +139,7 @@ public class TokenContract {
         return this.totalTokensSold.intValue();
     }
 
-    public void payable(PublicKey recipient, Double enziniums) {
+    void payable(PublicKey recipient, Double enziniums) {
         try {
             require(enziniums >= this.getTokenPrice());
             Double units = Math.floor(enziniums / tokenPrice);
