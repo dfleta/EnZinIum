@@ -20,6 +20,8 @@ public class TokenContractTest {
         ricknillos.addOwner(rick.getPK(), 100d);
         assertEquals(1, ricknillos.getBalances().size());
 
+        ricknillos.setTokenPrice(5d);
+
         morty = new Address();
         morty.generateKeyPair(); 
     }
