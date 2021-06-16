@@ -23,7 +23,7 @@ public class Address {
     }
 
     boolean isSKpresent() {
-        return this.getSK() != null ? true : false;
+        return this.getSK() != null;
     }
 
     private void setPK(PublicKey pKey) {
