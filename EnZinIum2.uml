@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_Lc1VoPfvEe6Q861J3PcDMQ" name="EnZinIum2">
+    <eAnnotations xmi:id="_Mz_84PfvEe6Q861J3PcDMQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_M0E1YPfvEe6Q861J3PcDMQ" source="codegen">
+        <details xmi:id="_M0E1YffvEe6Q861J3PcDMQ" key="codegenDirectory" value="/EnZinIum/src/test/resources"/>
+        <details xmi:id="_NF4-IPfvEe6Q861J3PcDMQ" key="AssociatedSourceCode" value="/EnZinIum/src/main/java/enzinium/GenSig.java;624848611/1;/EnZinIum/src/main/java/enzinium/Address.java;729440727/1;/EnZinIum/src/main/java/enzinium/TokenContract.java;3819051627/1;/EnZinIum/src/main/java/enzinium/App.java;2467944206/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_M6WcgPfvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_M6Zf0PfvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_M6Zf0ffvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_M6Zf0vfvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_M6Zf0_fvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_M6aG4PfvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_M6aG4ffvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_M6aG4vfvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_M6aG4_fvEe6Q861J3PcDMQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_M6ltEPfvEe6Q861J3PcDMQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_M6mUIPfvEe6Q861J3PcDMQ" name="security">
+        <packagedElement xmi:type="uml:Class" xmi:id="_M9CkIPfvEe6Q861J3PcDMQ" name="KeyPair"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_M9FncPfvEe6Q861J3PcDMQ" name="KeyPairGenerator"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_M9G1kPfvEe6Q861J3PcDMQ" name="PrivateKey"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_M9JR0ffvEe6Q861J3PcDMQ" name="PublicKey"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_M9Kf8PfvEe6Q861J3PcDMQ" name="SecureRandom"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_M9LHAffvEe6Q861J3PcDMQ" name="Signature"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_O1y1gPfvEe6Q861J3PcDMQ" name="lang">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_O1y1gffvEe6Q861J3PcDMQ" name="Double"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Px5RYPfvEe6Q861J3PcDMQ" name="Exception"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Pwh_cPfvEe6Q861J3PcDMQ" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_PxtrMPfvEe6Q861J3PcDMQ" name="HashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_Pxu5UffvEe6Q861J3PcDMQ" name="Map"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_M6qlkPfvEe6Q861J3PcDMQ" name="enzinium">
+      <packagedElement xmi:type="uml:Class" xmi:id="_M6to4PfvEe6Q861J3PcDMQ" name="GenSig" visibility="package">
+        <eAnnotations xmi:id="_M6xTQPfvEe6Q861J3PcDMQ" source="http://ns.yatta.de/umllab">
+          <contents xmi:type="ecore:EAnnotation" xmi:id="_M6x6UPfvEe6Q861J3PcDMQ" source="codegen">
+            <details xmi:id="_M6x6UffvEe6Q861J3PcDMQ" key="codegenDirectory" value="/EnZinIum/src/main/java"/>
+          </contents>
+        </eAnnotations>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_M9UQ8PfvEe6Q861J3PcDMQ" name="generateKeyPair" specification="_M6zvgPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9UQ8ffvEe6Q861J3PcDMQ" type="_M9CkIPfvEe6Q861J3PcDMQ" direction="return"/>
+          <language>java</language>
+          <body>try {
+
+         KeyPairGenerator keyGen = KeyPairGenerator.getInstance(&quot;DSA&quot;, &quot;SUN&quot;);
+         SecureRandom random = SecureRandom.getInstance(&quot;SHA1PRNG&quot;, &quot;SUN&quot;);
+         keyGen.initialize(1024, random);
+         KeyPair pair = keyGen.generateKeyPair();
+         return pair;
+     
+     } catch (Exception e) {
+         return null;
+     }
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_M9U4APfvEe6Q861J3PcDMQ" name="sign" specification="_M9P_gPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9U4AffvEe6Q861J3PcDMQ" name="sKey" type="_M9G1kPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_M9U4AvfvEe6Q861J3PcDMQ" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9U4A_fvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M9U4BPfvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>try {
+
+         // Indicate the message digest algorithm: SHA-1
+         Signature signDsa = Signature.getInstance(&quot;SHA1withDSA&quot;, &quot;SUN&quot;);
+         signDsa.initSign(sKey);
+         signDsa.update(message.getBytes());
+         // firma de los datos
+         byte[] realSig = signDsa.sign();
+         return realSig;
+
+     } catch (Exception e) {
+         return null;
+     }
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_M9U4BffvEe6Q861J3PcDMQ" name="verify" specification="_M9R0sPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9U4BvfvEe6Q861J3PcDMQ" name="pubKey" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_M9U4B_fvEe6Q861J3PcDMQ" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9U4CPfvEe6Q861J3PcDMQ" name="signedMessage">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M9U4CffvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9U4CvfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>try {
+         // importar la clave publica
+         Signature sig = Signature.getInstance(&quot;SHA1withDSA&quot;, &quot;SUN&quot;);
+         sig.initVerify(pubKey);
+         
+         // importar el mensaje
+         sig.update(message.getBytes());
+
+         // importar la firma
+         boolean verifies = sig.verify(signedMessage);
+         return verifies;
+
+     } catch (Exception e) {
+         return false;
+     }
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_M6zvgPfvEe6Q861J3PcDMQ" name="generateKeyPair" visibility="package" isStatic="true" method="_M9UQ8PfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9PYcPfvEe6Q861J3PcDMQ" type="_M9CkIPfvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_M9P_gPfvEe6Q861J3PcDMQ" name="sign" visibility="package" isStatic="true" method="_M9U4APfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9QmkPfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M9QmkffvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9P_gffvEe6Q861J3PcDMQ" name="sKey" type="_M9G1kPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_M9P_gvfvEe6Q861J3PcDMQ" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_M9R0sPfvEe6Q861J3PcDMQ" name="verify" visibility="package" isStatic="true" method="_M9U4BffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_M9R0sffvEe6Q861J3PcDMQ" name="pubKey" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_M9R0svfvEe6Q861J3PcDMQ" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9R0s_fvEe6Q861J3PcDMQ" name="signedMessage">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M9SbwffvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_M9SbwPfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_O0z-EPfvEe6Q861J3PcDMQ" name="Address">
+        <eAnnotations xmi:id="_O01zQPfvEe6Q861J3PcDMQ" source="http://ns.yatta.de/umllab">
+          <contents xmi:type="ecore:EAnnotation" xmi:id="_O01zQffvEe6Q861J3PcDMQ" source="codegen">
+            <details xmi:id="_O01zQvfvEe6Q861J3PcDMQ" key="codegenDirectory" value="/EnZinIum/src/main/java"/>
+          </contents>
+        </eAnnotations>
+        <ownedAttribute xmi:id="_O1140PfvEe6Q861J3PcDMQ" name="PK" type="_M9JR0ffvEe6Q861J3PcDMQ" isReadOnly="true" association="_O19NkPfvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_O12f4PfvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_O13G8PfvEe6Q861J3PcDMQ" name="SK" visibility="private" type="_M9G1kPfvEe6Q861J3PcDMQ" association="_O1-bsPfvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_O13G8ffvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_O13uAPfvEe6Q861J3PcDMQ" name="balance" visibility="package" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_O13uAffvEe6Q861J3PcDMQ" value="0d"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_O13uAvfvEe6Q861J3PcDMQ" name="symbol" visibility="private" isLeaf="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_O13uA_fvEe6Q861J3PcDMQ" value="&quot;EZI&quot;"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_OINyQvf5Ee6Q861J3PcDMQ" name="genSig" type="_M6to4PfvEe6Q861J3PcDMQ" association="_OILWAPf5Ee6Q861J3PcDMQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OIPAYPf5Ee6Q861J3PcDMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OIPAYff5Ee6Q861J3PcDMQ" value="1"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O15jMPfvEe6Q861J3PcDMQ" name="isSKpresent" specification="_O042kffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O15jMffvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.getSK() != null;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O15jMvfvEe6Q861J3PcDMQ" name="setPK" specification="_O1t9APfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O15jM_fvEe6Q861J3PcDMQ" name="pKey" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>this.PK = pKey;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O15jNPfvEe6Q861J3PcDMQ" name="generateKeyPair" specification="_O05doffvEe6Q861J3PcDMQ">
+          <language>java</language>
+          <body>KeyPair pair = GenSig.generateKeyPair();
+     this.setSK(pair.getPrivate());
+     this.setPK(pair.getPublic());
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O16KQPfvEe6Q861J3PcDMQ" name="transferEZI" specification="_O06EsPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O16KQffvEe6Q861J3PcDMQ" name="enziniums">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.balance += enziniums;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O16KQvfvEe6Q861J3PcDMQ" name="send" specification="_O10DoffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O16KQ_fvEe6Q861J3PcDMQ" name="contract" type="_O1xAUPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_O16KRPfvEe6Q861J3PcDMQ" name="enziniums" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>if (enziniums &lt;= this.balance) {
+         contract.payable(getPK(), enziniums);
+         this.balance -= enziniums;
+     }
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_O16KRffvEe6Q861J3PcDMQ" name="toString" specification="_O06rwPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O16KRvfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;\n&quot; + &quot;PK = &quot; + getPK().hashCode() + &quot;\n&quot; + 
+                   &quot;Balance = &quot; + getBalance() + &quot; &quot; 
+                   + this.symbol + &quot;\n&quot;;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_O03BYPfvEe6Q861J3PcDMQ" name="Address">
+          <eAnnotations xmi:id="_O03ocPfvEe6Q861J3PcDMQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_O03ocffvEe6Q861J3PcDMQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_O042kPfvEe6Q861J3PcDMQ" type="_O0z-EPfvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_O042kffvEe6Q861J3PcDMQ" name="isSKpresent" visibility="package" method="_O15jMPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O05doPfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_O05doffvEe6Q861J3PcDMQ" name="generateKeyPair" method="_O15jNPfvEe6Q861J3PcDMQ"/>
+        <ownedOperation xmi:id="_O06EsPfvEe6Q861J3PcDMQ" name="transferEZI" visibility="package" method="_O16KQPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O06EsffvEe6Q861J3PcDMQ" name="enziniums">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_O06rwPfvEe6Q861J3PcDMQ" name="toString" method="_O16KRffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O07S0PfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_O1t9APfvEe6Q861J3PcDMQ" name="setPK" visibility="private" method="_O15jMvfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O1t9AffvEe6Q861J3PcDMQ" name="pKey" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_O10DoffvEe6Q861J3PcDMQ" name="send" method="_O16KQvfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_O10qsPfvEe6Q861J3PcDMQ" name="contract" type="_O1xAUPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_O10qsffvEe6Q861J3PcDMQ" name="enziniums" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_O1xAUPfvEe6Q861J3PcDMQ" name="TokenContract">
+        <eAnnotations xmi:id="_Pw1hcPfvEe6Q861J3PcDMQ" source="http://ns.yatta.de/umllab">
+          <contents xmi:type="ecore:EAnnotation" xmi:id="_Pw3WoPfvEe6Q861J3PcDMQ" source="codegen">
+            <details xmi:id="_Pw3WoffvEe6Q861J3PcDMQ" key="codegenDirectory" value="/EnZinIum/src/main/java"/>
+          </contents>
+        </eAnnotations>
+        <ownedAttribute xmi:id="_Px7toPfvEe6Q861J3PcDMQ" name="ownerPK" visibility="private" type="_M9JR0ffvEe6Q861J3PcDMQ" association="_PyHT0PfvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px8UsPfvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px87wPfvEe6Q861J3PcDMQ" name="owner" visibility="private" type="_O0z-EPfvEe6Q861J3PcDMQ" association="_PyIh8ffvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px87wffvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px87w_fvEe6Q861J3PcDMQ" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px9i0PfvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px9i0vfvEe6Q861J3PcDMQ" name="symbol" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px9i0_fvEe6Q861J3PcDMQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px-J4ffvEe6Q861J3PcDMQ" name="totalSupply" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px-J4vfvEe6Q861J3PcDMQ" value="0d"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px-w8ffvEe6Q861J3PcDMQ" name="totalTokensSold" visibility="private" type="_O1y1gffvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px-w8vfvEe6Q861J3PcDMQ" value="0d"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px_YAPfvEe6Q861J3PcDMQ" name="tokenPrice" visibility="public" type="_O1y1gffvEe6Q861J3PcDMQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px_YAffvEe6Q861J3PcDMQ" value="0d"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Px_YAvfvEe6Q861J3PcDMQ" name="balances" visibility="private" isLeaf="true" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          <qualifier xmi:id="_u_fRoPf2Ee6Q861J3PcDMQ" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Px__EPfvEe6Q861J3PcDMQ" value="new HashMap&lt;PublicKey, Double>()"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDCYPfvEe6Q861J3PcDMQ" name="TokenContract" specification="_PxxVkPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDCYffvEe6Q861J3PcDMQ" name="owner" type="_O0z-EPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyDCYvfvEe6Q861J3PcDMQ" type="_O1xAUPfvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.owner = owner;
+     this.ownerPK = owner.getPK();
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDCY_fvEe6Q861J3PcDMQ" name="setName" specification="_Pw5L0PfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDCZPfvEe6Q861J3PcDMQ" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.name = name;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDCZffvEe6Q861J3PcDMQ" name="setSymbol" specification="_Pw6Z8PfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDCZvfvEe6Q861J3PcDMQ" name="symbol">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.symbol = symbol;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpcPfvEe6Q861J3PcDMQ" name="setTotalSupply" specification="_Pw7BAPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpcffvEe6Q861J3PcDMQ" name="totalSupply">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.totalSupply = totalSupply;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpcvfvEe6Q861J3PcDMQ" name="owner" specification="_Pw7oEPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpc_fvEe6Q861J3PcDMQ" type="_O0z-EPfvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.owner;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpdPfvEe6Q861J3PcDMQ" name="name" specification="_Pw8PIPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpdffvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.name;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpdvfvEe6Q861J3PcDMQ" name="symbol" specification="_Pw82MPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpd_fvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.symbol;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpePfvEe6Q861J3PcDMQ" name="totalSupply" specification="_Pw82MvfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpeffvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.totalSupply;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyDpevfvEe6Q861J3PcDMQ" name="getBalances" specification="_Pw9dQffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyDpe_fvEe6Q861J3PcDMQ" type="_Pxu5UffvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.balances;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyEQgPfvEe6Q861J3PcDMQ" name="toString" specification="_Pw-rYPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyEQgffvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;\n&quot; + &quot;name = &quot; + name() + &quot;\n&quot; + 
+                   &quot;symbol = &quot; + symbol() + &quot;\n&quot; +
+                   &quot;totalSupply = &quot; + totalSupply() + &quot;\n&quot; +
+                   &quot;owner PK = &quot; + this.ownerPK.hashCode() + &quot;\n&quot;;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyEQgvfvEe6Q861J3PcDMQ" name="addOwner" specification="_PxyjsPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyEQg_fvEe6Q861J3PcDMQ" name="PK" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyEQhPfvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>getBalances().putIfAbsent(PK, units);
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyEQhffvEe6Q861J3PcDMQ" name="numOwners" specification="_PxAgkPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyEQhvfvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.getBalances().size();
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyEQh_fvEe6Q861J3PcDMQ" name="balanceOf" specification="_PxzKwPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyEQiPfvEe6Q861J3PcDMQ" name="owner" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyEQiffvEe6Q861J3PcDMQ" type="_O1y1gffvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.getBalances().getOrDefault(owner, 0d);
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyEQivfvEe6Q861J3PcDMQ" name="transfer" specification="_Pxzx0ffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyEQi_fvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyEQjPfvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>try {
+         require(balanceOf(ownerPK) >= units);
+         this.getBalances().compute(ownerPK, (pk, tokens) -> tokens - units);
+         this.getBalances().put(recipient, balanceOf(recipient) + units);
+     } catch (Exception e) {
+         // fails silently
+     }      
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyE3kPfvEe6Q861J3PcDMQ" name="transfer" specification="_Px0Y4ffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyE3kffvEe6Q861J3PcDMQ" name="sender" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyE3kvfvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyE3k_fvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>try {
+         require(balanceOf(sender) >= units);
+         this.getBalances().put(sender, balanceOf(sender) - units);
+         this.getBalances().put(recipient, balanceOf(recipient) + units);
+     } catch (Exception e) {
+         // fails silently
+     }   
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyE3lPfvEe6Q861J3PcDMQ" name="require" specification="_PxBusPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyE3lffvEe6Q861J3PcDMQ" name="holds">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>if (! holds) {
+         throw new Exception();
+     }
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyE3lvfvEe6Q861J3PcDMQ" name="owners" specification="_PxBusvfvEe6Q861J3PcDMQ">
+          <language>java</language>
+          <body>for (PublicKey pk : this.getBalances().keySet()) {
+         if (!pk.equals(this.ownerPK)) {
+             System.out.println(&quot;Owner: &quot; + pk.hashCode() + &quot; &quot; 
+                                          + getBalances().get(pk) + &quot; &quot;
+                                          + this.symbol());
+         }
+     }
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyE3l_fvEe6Q861J3PcDMQ" name="totalTokensSold" specification="_PxCVwPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyE3mPfvEe6Q861J3PcDMQ" direction="return">
+            <name xsi:nil="true"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.getBalances().forEach((pk, units) -> this.totalTokensSold += units);
+     this.totalTokensSold -= balanceOf(ownerPK);
+     return this.totalTokensSold.intValue();
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_PyFeoPfvEe6Q861J3PcDMQ" name="payable" specification="_Px0_8PfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PyFeoffvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PyFeovfvEe6Q861J3PcDMQ" name="enziniums" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+          <language>java</language>
+          <body>try {
+         require(enziniums >= this.getTokenPrice());
+         Double units = Math.floor(enziniums / tokenPrice);
+         transfer(recipient, units);
+         this.owner.transferEZI(enziniums);
+     } catch (Exception e) {
+         // fail silently
+     }
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Pw5L0PfvEe6Q861J3PcDMQ" name="setName" method="_PyDCY_fvEe6Q861J3PcDMQ">
+          <ownedComment xmi:id="_vAU_Iff2Ee6Q861J3PcDMQ">
+            <body>getters y setters</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_Pw5y4PfvEe6Q861J3PcDMQ" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw6Z8PfvEe6Q861J3PcDMQ" name="setSymbol" method="_PyDCZffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw6Z8ffvEe6Q861J3PcDMQ" name="symbol">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw7BAPfvEe6Q861J3PcDMQ" name="setTotalSupply" method="_PyDpcPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw7BAffvEe6Q861J3PcDMQ" name="totalSupply">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw7oEPfvEe6Q861J3PcDMQ" name="owner" method="_PyDpcvfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pxx8o_fvEe6Q861J3PcDMQ" type="_O0z-EPfvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw8PIPfvEe6Q861J3PcDMQ" name="name" method="_PyDpdPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw8PIffvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw82MPfvEe6Q861J3PcDMQ" name="symbol" method="_PyDpdvfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw82MffvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw82MvfvEe6Q861J3PcDMQ" name="totalSupply" method="_PyDpePfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw9dQPfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw9dQffvEe6Q861J3PcDMQ" name="getBalances" method="_PyDpevfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Px4qUPfvEe6Q861J3PcDMQ" type="_Pxu5UffvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pw-rYPfvEe6Q861J3PcDMQ" name="toString" method="_PyEQgPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pw_ScPfvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxAgkPfvEe6Q861J3PcDMQ" name="numOwners" method="_PyEQhffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PxAgkffvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxBusPfvEe6Q861J3PcDMQ" name="require" visibility="private" method="_PyE3lPfvEe6Q861J3PcDMQ" raisedException="_Px5RYPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PxBusffvEe6Q861J3PcDMQ" name="holds">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxBusvfvEe6Q861J3PcDMQ" name="owners" method="_PyE3lvfvEe6Q861J3PcDMQ"/>
+        <ownedOperation xmi:id="_PxCVwPfvEe6Q861J3PcDMQ" name="totalTokensSold" method="_PyE3l_fvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PxCVwffvEe6Q861J3PcDMQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxxVkPfvEe6Q861J3PcDMQ" name="TokenContract" method="_PyDCYPfvEe6Q861J3PcDMQ">
+          <eAnnotations xmi:id="_Pxx8oPfvEe6Q861J3PcDMQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Pxx8offvEe6Q861J3PcDMQ" key="create"/>
+          </eAnnotations>
+          <ownedComment xmi:id="_vAU_IPf2Ee6Q861J3PcDMQ">
+            <body>constructor</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_PxxVkffvEe6Q861J3PcDMQ" name="owner" type="_O0z-EPfvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Pxx8ovfvEe6Q861J3PcDMQ" type="_O1xAUPfvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxyjsPfvEe6Q861J3PcDMQ" name="addOwner" method="_PyEQgvfvEe6Q861J3PcDMQ">
+          <ownedComment xmi:id="_vAU_Ivf2Ee6Q861J3PcDMQ">
+            <body>logica</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_PxyjsffvEe6Q861J3PcDMQ" name="PK" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_PxyjsvfvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_PxzKwPfvEe6Q861J3PcDMQ" name="balanceOf" method="_PyEQh_fvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_PxzKwffvEe6Q861J3PcDMQ" name="owner" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Pxzx0PfvEe6Q861J3PcDMQ" type="_O1y1gffvEe6Q861J3PcDMQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Pxzx0ffvEe6Q861J3PcDMQ" name="transfer" method="_PyEQivfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Pxzx0vfvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Px0Y4PfvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Px0Y4ffvEe6Q861J3PcDMQ" name="transfer" method="_PyE3kPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Px0Y4vfvEe6Q861J3PcDMQ" name="sender" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Px0Y4_fvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Px0Y5PfvEe6Q861J3PcDMQ" name="units" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Px0_8PfvEe6Q861J3PcDMQ" name="payable" visibility="package" method="_PyFeoPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Px0_8ffvEe6Q861J3PcDMQ" name="recipient" type="_M9JR0ffvEe6Q861J3PcDMQ"/>
+          <ownedParameter xmi:id="_Px0_8vfvEe6Q861J3PcDMQ" name="enziniums" type="_O1y1gffvEe6Q861J3PcDMQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_O19NkPfvEe6Q861J3PcDMQ" name="" memberEnd="_O19NkffvEe6Q861J3PcDMQ _O1140PfvEe6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_O19NkffvEe6Q861J3PcDMQ" name="" type="_O0z-EPfvEe6Q861J3PcDMQ" association="_O19NkPfvEe6Q861J3PcDMQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_O1-bsPfvEe6Q861J3PcDMQ" name="" memberEnd="_O1-bsffvEe6Q861J3PcDMQ _O13G8PfvEe6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_O1-bsffvEe6Q861J3PcDMQ" name="" type="_O0z-EPfvEe6Q861J3PcDMQ" association="_O1-bsPfvEe6Q861J3PcDMQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_PyAmIffvEe6Q861J3PcDMQ" name="PublicKey"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PyHT0PfvEe6Q861J3PcDMQ" name="" memberEnd="_PyHT0ffvEe6Q861J3PcDMQ _Px7toPfvEe6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_PyHT0ffvEe6Q861J3PcDMQ" name="" type="_O1xAUPfvEe6Q861J3PcDMQ" association="_PyHT0PfvEe6Q861J3PcDMQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PyIh8ffvEe6Q861J3PcDMQ" name="" memberEnd="_PyIh8vfvEe6Q861J3PcDMQ _Px87wPfvEe6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_PyIh8vfvEe6Q861J3PcDMQ" name="" type="_O1xAUPfvEe6Q861J3PcDMQ" association="_PyIh8ffvEe6Q861J3PcDMQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RjkDUPfvEe6Q861J3PcDMQ" name="App">
+        <eAnnotations xmi:id="_RjkqYPfvEe6Q861J3PcDMQ" source="http://ns.yatta.de/umllab">
+          <contents xmi:type="ecore:EAnnotation" xmi:id="_RjkqYffvEe6Q861J3PcDMQ" source="codegen">
+            <details xmi:id="_RjkqYvfvEe6Q861J3PcDMQ" key="codegenDirectory" value="/EnZinIum/src/main/java"/>
+          </contents>
+        </eAnnotations>
+        <ownedComment xmi:id="_RjntsPfvEe6Q861J3PcDMQ">
+          <body>Contratos inteligentes con enZinium.
+
+Rick va a organizar un concieto de Los Ricknillos
+y quiere poner a la venta 100 entradas en nuestra
+plataforma enZinium.
+Para ello va a utilizar un contrato inteligente 
+construido sobre nuestra plataforma.
+Este contrato recibira instrucciones sobre a quien vender
+las entradas. El contrato almacenara que usuarios/as 
+de la plataforma poseen las entradas.
+Cada usuario/a dipone de una Address /direccion en la
+plataforma, desde la que gestionar sus enZiniums 
+y las entradas.</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_Ijna4PfxEe6Q861J3PcDMQ" name="address" type="_O0z-EPfvEe6Q861J3PcDMQ" association="_Ijk-oPfxEe6Q861J3PcDMQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ij5HsPfxEe6Q861J3PcDMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ij5uwPfxEe6Q861J3PcDMQ" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_RjnGoffvEe6Q861J3PcDMQ" name="main" specification="_RjlRcPfvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_RjnGovfvEe6Q861J3PcDMQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RjnGo_fvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>/**
+      * Crea una Address en nuestro sistema para Rick
+      * Genera las claves privada y publica de la direccion
+      * El balance de enZinium de su direccion es cero
+      * El simbolo del enZinium es EZI
+      */
+
+     Address rick = new Address();
+     rick.generateKeyPair();
+
+     /**
+      * Visualiza la direccion publica de Rick y su balance
+      * 
+      * Utiliza el metodo hashCode() de PublicKey para 
+      * mostrar la PublicKey en consola 
+      */
+     
+     System.out.println(&quot;\n&quot; + &quot;Address de Rick&quot; + &quot;\n&quot; + 
+                               &quot;===============&quot;        );
+     System.out.println(rick.toString());
+
+     /**
+      * Creamos una Address en nuestro sistema para Morty
+      * y otra para Jen y visualizamos su direccion puvlica
+      * y balance
+      */
+     
+     Address morty = new Address();
+     morty.generateKeyPair();
+
+     Address jen = new Address();
+     jen.generateKeyPair();
+
+     System.out.println(&quot;\n&quot; + &quot;Address de Morty&quot; + &quot;\n&quot; + 
+                               &quot;===============&quot;        );
+     System.out.println(morty.toString());  
+     System.out.println(&quot;\n&quot; + &quot;Address de Jen&quot; + &quot;\n&quot; + 
+                               &quot;===============&quot;        );
+     System.out.println(jen.toString());         
+
+     /**
+      * Crea una contrato inteligente de tipo TokenContract 
+      * en nuestro sistema para que Rick pueda vender 100 
+      * entradas para el concierto de &quot;los Ricknillos&quot;. 
+      *  
+      * El nombre del token (las entradas) es Ricknillos.
+      * Su simbolo es RNiLL.
+      * 
+      * El propietario del contrato es Rick. Asigna su Public Key
+      * a la propiedad owner del contrato mediante el contructor
+      * de TokenContract.
+      * 
+      * En la clase TokenContract programa las funciones a utilizar en 
+      * el metodo toString():
+      * 
+      * name() 
+      * @return devuelve el nombre del token de forma human-readable (p.e., “US Dollars”).
+      * 
+      * symbol()
+      * @return el nombre del símbolo del token de forma human-readable (p.e., “USD”).
+      * 
+      * totalSupply()
+      * @return el total de unidades de este token que actualmente existen.
+      */
+
+     TokenContract ricknillos = new TokenContract(rick);
+     ricknillos.setName(&quot;Ricknillos&quot;);
+     ricknillos.setSymbol(&quot;RNiLL&quot;);
+     ricknillos.setTotalSupply(100);
+     ricknillos.setTokenPrice(5d);
+
+     System.out.println(&quot;\n&quot; + &quot;Contrato de los Ricknillos&quot; + &quot;\n&quot; + 
+                               &quot;==========================&quot;        );
+     System.out.println(ricknillos.toString());
+
+     /**
+      * El contrato TokenContract contiene una tabla de balances 
+      * de token por propietario:
+      * mapping(propietario => numero de unidades que posee)
+      * Permite al contrato llevar el seguimiento de quien
+      * posee las entradas. 
+      * Cada transferencia de entradas entre propietarios es 
+      * una deducción en un balance y una adicion en el otro.
+      * 
+      * Crea una tabla &quot;balances&quot; que mapee cada propietario 
+      * (su Public Key) al numero de tokens que posee.
+      * Añade a Rick con sus 100 entradas.
+      * Asegurate de que si el propietario (su Public Key) 
+      * ya existe en la tabla, sus unidades no se actualicen.
+      * 
+      * addOwner()
+      * añade el propietario inicial de todos los tokens de este contrato
+      * @param PublicKey del propietario
+      * @param cantidad de tokens que posee
+      */
+
+     ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+     // verifica que Rick no se actualiza una vez que ya existe en el balance
+     ricknillos.addOwner(rick.getPK(), 500d);
+     
+     /**
+      * Consulta los balances
+      * 
+      * numOwners()
+      * @return numero de propietarios registrados en la tabla balances
+      * 
+      * balanceOf()
+      * @param PublicKey del propietario
+      * @return cantidad de tokens que posee
+      * Dada una direccion, devuelve su balance de tokens. Si no existe 
+      * el propietario, devuelve cero.
+      */
+     System.out.println(&quot;\n&quot; + &quot;Consulta de balances&quot; + &quot;\n&quot; + 
+                               &quot;====================&quot;        );
+
+     System.out.println(&quot;\n&quot; + &quot;Numero de propietarios: &quot; + ricknillos.numOwners());
+
+     System.out.println(&quot;Entradas de Rick: &quot; 
+                             + ricknillos.balanceOf(rick.getPK()) 
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     System.out.println(&quot;Entradas de Morty: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     /**
+      * Morty quiere comprarle 2 entradas a Rick
+      * 
+      * transfer()
+      * @param PublicKey del destinatario
+      * @param cantidad de tokens
+      * Dada una direccion y una cantidad, transfiere esa cantidad
+      * de tokens a esa direccion, desde el balance de la direccion
+      * propietaria del contrato (la de Rick en este caso).
+      * 
+      * LLama a la funcion require() para comprobar si el propietario 
+      * del contrato dispone de suficientes tokens. Si no hay suficientes,
+      * falla silenciosamente (no hace nada) y no modifica los balances.
+      * 
+      * require()
+      * @param una condicion que ha de verificarse (ser cierta)
+      * Lanza una EXCEPCION si no se cumple la condicion
+      */
+
+     System.out.println(&quot;\n&quot; + &quot;Transferencia de entradas&quot; + &quot;\n&quot; + 
+                               &quot;=========================&quot;        );
+
+     ricknillos.transfer(morty.getPK(), 2d);
+
+     System.out.println(&quot;Entradas de Rick: &quot; 
+                             + ricknillos.balanceOf(rick.getPK()) 
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     System.out.println(&quot;Entradas de Morty: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     // verifica que require falla si no hay tokens suficientes en el balance de Rick
+     ricknillos.transfer(morty.getPK(), 300d);
+
+     System.out.println(&quot;Rick no tiene 300 entradas => entradas de Morty: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+     
+     // Morty vuelve a comprar un par de entradas mas
+     ricknillos.transfer(morty.getPK(), 2d);
+
+     System.out.println(&quot;2 entradas mas para Morty: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     /**
+      * A veces, hay reventa ;)
+      * 
+      * Morty le vende 1 entrada a Jen.
+      * 
+      * Dado un remitente, un destinatario, y una cantidad, 
+      * se transfieren tokens de una direccion a la otra.
+      *   
+      * transfer()
+      * @param sender PK
+      * @param recipient PK
+      * @param cantidad de tokens
+      */
+
+     System.out.println(&quot;\n&quot; + &quot;Reventa de entradas&quot; + &quot;\n&quot; + 
+                               &quot;===================&quot;        );
+     
+     ricknillos.transfer(morty.getPK(), jen.getPK(), 1d);
+
+     System.out.println(&quot;Entradas de Morty: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+     System.out.println(&quot;Entradas de Jen: &quot; 
+                             + ricknillos.balanceOf(jen.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     /**
+      * Llega el dia del concierto y Rick quiere
+      * controlar el acceso a la sala de conciertos.
+      * Muestra una lista de compradores con el número de entradas
+      * que han adquirido (excluyendo a Rick).
+      * 
+      * owners()
+      * @return muestra en consola la PublicKey de los compradores
+      *         y el numero de tokens que han adquirido
+      */
+
+     System.out.println(&quot;\n&quot; + &quot;Lista de compradores&quot; + &quot;\n&quot; + 
+                               &quot;====================&quot;        );
+     ricknillos.owners();
+     
+     /**
+      * Calcula el numero de asistentes al concierto (excluyendo a Rick),
+      * es decir, el numero de entradas vendidas.
+      * 
+      * totalTokensSold()
+      * @return numero de tokens (entradas) vendidos
+      */
+
+     System.out.println(&quot;\n&quot; + &quot;Total de asistentes: &quot; 
+                                 + ricknillos.totalTokensSold() + &quot;\n&quot;);
+
+     
+     /**
+      * AHORA A POR EL EXCEL·LENT !!
+      * CAN DO !!
+      */
+
+     /**
+      * Vamos a comprar entradas con nuestra moneda enZinium.
+      * 
+      * Añade 20 enZiniums a la direccion de Morty:
+      * 
+      * transferEZI()
+      * @param address del receptor
+      * @param cantidad de enZiniums
+      * Añade la cantidad de EZi al balance de EZI en
+      * la dirección del receptor.
+      */
+
+     morty.transferEZI(20d);
+
+     System.out.println(&quot;\n&quot; + &quot;Recarga eZis de Morty&quot; + &quot;\n&quot; + 
+                               &quot;=====================&quot;        );
+     System.out.println(morty.toString());
+
+     /** 
+      * Morty Compra 2 entradas a 5 enZiniums cada una:
+      * envia una transferencia al contrato de ricknillo 
+      * por valor de 10 enZiniums:
+      * 
+      * send()
+      * @param contrato
+      * @param enziniums
+      * Esta funcion envia esa cantidad de enziniums
+      * al contrato (¡si la direccion dispone de suficientes enziniums!)
+      * y actualiza el balance de Morty
+      * 
+      * La funcion send() llama a la funcion payable() del contrato:
+      * 
+      * payable()
+      * @param direccion del receptor de los tokens /entradas
+      * @param cantidad de enziniums
+      * Esta funcion calcula cuantas entradas se pueden comprar 
+      * con esa cantidad de enziniums y llama a la funcion
+      * transfer() del contrato para actualizar los balances 
+      * de Morty (el receptor) y Rick (el vendedor, propietario
+      * del contrato).
+      * 
+      * Finalmente, la funcion payable() del contrato le envia
+      * los enZinium al propietario del contrato (Rick) mediante
+      * la funcion transfer() de Address:
+      * 
+      * transferEZI()
+      * @param address del receptor
+      * @param cantidad de enZiniums
+      * Actualiza el balance de EZI en la dirección del receptor
+      * de esos enZiniums
+      */
+
+     morty.send(ricknillos, 10d);
+
+     ricknillos.owners();
+     System.out.println(&quot;Owner: &quot; + rick.getPK().hashCode() + &quot; &quot; 
+                                  + ricknillos.balanceOf(rick.getPK())
+                                  + &quot; &quot;
+                                  + ricknillos.symbol());
+
+     System.out.println(&quot;\n&quot; + &quot;Address de Rick&quot; + &quot;\n&quot; + 
+                               &quot;===============&quot;        );
+     System.out.println(rick.toString());
+     System.out.println(&quot;\n&quot; + &quot;Address de Morty&quot; + &quot;\n&quot; + 
+                               &quot;===============&quot;        );
+     System.out.println(morty.toString());
+
+     // verifica que Morty no tiene dinero para comprar una entrada
+     morty.send(ricknillos, 3d);
+
+     System.out.println(&quot;Morty no paga suficientes EZI por una entrada&quot; +
+                         &quot;\n => sigue teniendo 5 entradas: &quot; 
+                             + ricknillos.balanceOf(morty.getPK())
+                             + &quot; &quot;
+                             + ricknillos.symbol());
+
+     System.out.println(&quot;\n&quot; + &quot;y Rick no recibe EZI => sigue con 10: &quot; 
+                                     + rick.getBalance()
+                                     + &quot;\n&quot;);
+
+     System.out.println(&quot;y Rick sigue con sus 94 entradas: &quot; 
+                                         + ricknillos.balanceOf(rick.getPK())
+                                         + &quot; &quot;
+                                         + ricknillos.symbol());
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_RjlRcPfvEe6Q861J3PcDMQ" name="main" isStatic="true" method="_RjnGoffvEe6Q861J3PcDMQ">
+          <ownedParameter xmi:id="_Rjl4gPfvEe6Q861J3PcDMQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RjnGoPfvEe6Q861J3PcDMQ" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Ijk-oPfxEe6Q861J3PcDMQ" name="" memberEnd="_IjmMwPfxEe6Q861J3PcDMQ _Ijna4PfxEe6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_IjmMwPfxEe6Q861J3PcDMQ" name="app" type="_RjkDUPfvEe6Q861J3PcDMQ" association="_Ijk-oPfxEe6Q861J3PcDMQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ijmz0PfxEe6Q861J3PcDMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ijmz0ffxEe6Q861J3PcDMQ" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_OILWAPf5Ee6Q861J3PcDMQ" name="" memberEnd="_OINLMPf5Ee6Q861J3PcDMQ _OINyQvf5Ee6Q861J3PcDMQ">
+        <ownedEnd xmi:id="_OINLMPf5Ee6Q861J3PcDMQ" name="address" type="_O0z-EPfvEe6Q861J3PcDMQ" association="_OILWAPf5Ee6Q861J3PcDMQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OINyQPf5Ee6Q861J3PcDMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OINyQff5Ee6Q861J3PcDMQ" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_M0KU8PfvEe6Q861J3PcDMQ">
+      <eAnnotations xmi:id="_M0NYQPfvEe6Q861J3PcDMQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_M0PNcPfvEe6Q861J3PcDMQ" base_Package="_Lc1VoPfvEe6Q861J3PcDMQ">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_M9FAYPfvEe6Q861J3PcDMQ" base_Element="_M9CkIPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_M9GOgPfvEe6Q861J3PcDMQ" base_Element="_M9FncPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_M9JR0PfvEe6Q861J3PcDMQ" base_Element="_M9G1kPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_M9J44PfvEe6Q861J3PcDMQ" base_Element="_M9JR0ffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_M9LHAPfvEe6Q861J3PcDMQ" base_Element="_M9Kf8PfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_M9MVIPfvEe6Q861J3PcDMQ" base_Element="_M9LHAffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Array xmi:id="_M9RNoPfvEe6Q861J3PcDMQ" base_Element="_M9P_gPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_O04PgPfvEe6Q861J3PcDMQ" base_Element="_O03BYPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_O0754PfvEe6Q861J3PcDMQ" base_Element="_O06rwPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Annotations xmi:id="_O08g8PfvEe6Q861J3PcDMQ" base_Element="_O06rwPfvEe6Q861J3PcDMQ">
+    <annotations xmi:id="_O09IAPfvEe6Q861J3PcDMQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_O10DoPfvEe6Q861J3PcDMQ" base_Element="_O1y1gffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_O14VEPfvEe6Q861J3PcDMQ" base_Element="_O13uAvfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_O190oPfvEe6Q861J3PcDMQ" base_Element="_O19NkPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_O1_CwPfvEe6Q861J3PcDMQ" base_Element="_O1-bsPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Generics xmi:id="_Pw-EUPfvEe6Q861J3PcDMQ" genericsValue="PublicKey, Double" base_Element="_Pw9dQffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Pw_ScffvEe6Q861J3PcDMQ" base_Element="_Pw-rYPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Annotations xmi:id="_Pw_5gPfvEe6Q861J3PcDMQ" base_Element="_Pw-rYPfvEe6Q861J3PcDMQ">
+    <annotations xmi:id="_Pw_5gffvEe6Q861J3PcDMQ" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_Pxu5UPfvEe6Q861J3PcDMQ" base_Element="_PxtrMPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_PxwHcPfvEe6Q861J3PcDMQ" base_Element="_Pxu5UffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_Px54cPfvEe6Q861J3PcDMQ" base_Element="_Px5RYPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px8UsffvEe6Q861J3PcDMQ" base_Element="_Px7toPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px87wvfvEe6Q861J3PcDMQ" base_Element="_Px87wPfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px9i0ffvEe6Q861J3PcDMQ" base_Element="_Px87w_fvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px-J4PfvEe6Q861J3PcDMQ" base_Element="_Px9i0vfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px-w8PfvEe6Q861J3PcDMQ" base_Element="_Px-J4ffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Px-w8_fvEe6Q861J3PcDMQ" base_Element="_Px-w8ffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_PyAmIPfvEe6Q861J3PcDMQ" base_Element="_Px_YAvfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_PyB0QPfvEe6Q861J3PcDMQ" base_Element="_PyAmIffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_PyIh8PfvEe6Q861J3PcDMQ" base_Element="_PyHT0PfvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Reference xmi:id="_PyJJAPfvEe6Q861J3PcDMQ" base_Element="_PyIh8ffvEe6Q861J3PcDMQ"/>
+  <UMLLabProfile:Patch xmi:id="_yNh68Pf2Ee6Q861J3PcDMQ" base_Element="_O1xAUPfvEe6Q861J3PcDMQ" patchText="@@ -889,24 +889,26 @@&#xA; upply;%0A    %7D&#xA;+;%0A&#xA; %0A    public &#xA;@@ -2437,24 +2437,26 @@&#xA;       %0A    %7D&#xA;+;%0A&#xA; %0A    public &#xA;" conflicting="false"/>
+</xmi:XMI>
