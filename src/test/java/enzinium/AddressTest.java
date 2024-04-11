@@ -26,7 +26,6 @@ public class AddressTest {
         assertNotNull(address.isSKpresent());
     }
 
-
     @Test
     public void transferEZI_test() {
 
