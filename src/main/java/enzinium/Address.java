@@ -57,8 +57,12 @@ public class Address {
 
     @Override
     public String toString() {
-        return "\n" + "PK = " + getPK().hashCode() + "\n" + 
-                      "Balance = " + getBalance() + " " 
-                      + this.symbol + "\n";
+        return new StringBuilder()
+                .append("\nPK = ")
+                .append(this.getPK().hashCode())
+                .append("\nBalance = ")
+                .append(this.getBalance())
+                .append("s")
+                .append(this.symbol).toString();
     }
 }

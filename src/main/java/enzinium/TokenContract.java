@@ -75,8 +75,8 @@ public class TokenContract {
     
     @Override
     public String toString() {
-        StringBuilder contract = new StringBuilder();
-        return contract.append("\nname = ")
+        return new StringBuilder()
+                .append("\nname = ")
                 .append(this.name())
                 .append("\nsymbol = ")
                 .append(this.symbol())
@@ -131,14 +131,14 @@ public class TokenContract {
     public void owners() {
         for (PublicKey pk : this.getBalances().keySet()) {
             if (!pk.equals(this.ownerPK)) {
-                StringBuilder owner = new StringBuilder();
-                owner.append("Owner: ")
-                    .append(pk.hashCode())
-                    .append("\s")
-                    .append(this.getBalances().get(pk))
-                    .append("\s")
-                    .append(this.symbol());
-                System.out.println(owner);
+                System.out.println(
+                    new StringBuilder()
+                        .append("Owner: ")
+                        .append(pk.hashCode())
+                        .append("\s")
+                        .append(this.getBalances().get(pk))
+                        .append("\s")
+                        .append(this.symbol()));
             }
         }
     }
