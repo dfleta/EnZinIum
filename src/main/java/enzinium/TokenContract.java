@@ -14,7 +14,7 @@ public class TokenContract {
     private Double totalTokensSold = 0d;
     private Double tokenPrice = 0d; 
 
-    private final Map<PublicKey, Double> balances = new HashMap<>(); 
+    private final Map<PublicKey, Double> balances = new HashMap<PublicKey, Double>(); 
 
     /**
      * constructor
