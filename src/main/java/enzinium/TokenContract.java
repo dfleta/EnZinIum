@@ -75,10 +75,15 @@ public class TokenContract {
     
     @Override
     public String toString() {
-        return "\n" + "name = " + name() + "\n" + 
-                      "symbol = " + symbol() + "\n" +
-                      "totalSupply = " + totalSupply() + "\n" +
-                      "owner PK = " + this.ownerPK.hashCode() + "\n";
+        StringBuilder contract = new StringBuilder();
+        return contract.append("\nname = ")
+                .append(this.name())
+                .append("\nsymbol = ")
+                .append(this.symbol())
+                .append("\ntotalSupply = ")
+                .append(this.totalSupply())
+                .append("\nowner PK = ")
+                .append(this.ownerPK.hashCode()).toString();
     }
 
     /**
