@@ -126,9 +126,14 @@ public class TokenContract {
     public void owners() {
         for (PublicKey pk : this.getBalances().keySet()) {
             if (!pk.equals(this.ownerPK)) {
-                System.out.println("Owner: " + pk.hashCode() + " " 
-                                             + getBalances().get(pk) + " "
-                                             + this.symbol());
+                StringBuilder owner = new StringBuilder();
+                owner.append("Owner: ")
+                    .append(pk.hashCode())
+                    .append("\s")
+                    .append(this.getBalances().get(pk))
+                    .append("\s")
+                    .append(this.symbol());
+                System.out.println(owner);
             }
         }
     }
