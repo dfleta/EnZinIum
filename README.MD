@@ -48,6 +48,8 @@ Crea un documento donde escribas las historias de usuario correspondientes a los
 
 Realiza a mano alzada -o con la aplicación que prefieras- un pequeño diagrama de clases UML que muestre la relación entre las clases que has construído, con su interfaz pública y privada.
 
+![diagrama de clases UML](./doc/diagrama_clases_UML.png)
+
 ## Código
 
 ### Clase `Address`
