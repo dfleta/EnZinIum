@@ -62,7 +62,7 @@ public class Address {
                 .append(this.getPK().hashCode())
                 .append("\nBalance = ")
                 .append(this.getBalance())
-                .append("s")
+                .append("\s")
                 .append(this.symbol).toString();
     }
 }
