@@ -128,19 +128,20 @@ public class TokenContract {
         }
     }
 
-    public void owners() {
+    public String owners() {
+        StringBuilder owners = new StringBuilder();
         for (PublicKey pk : this.getBalances().keySet()) {
             if (!pk.equals(this.ownerPK)) {
-                System.out.println(
-                    new StringBuilder()
-                        .append("Owner: ")
+                    owners.append("Owner: ")
                         .append(pk.hashCode())
                         .append("\s")
                         .append(this.getBalances().get(pk))
                         .append("\s")
-                        .append(this.symbol()));
+                        .append(this.symbol())
+                        .append("\n");
             }
         }
+        return owners.toString();
     }
 
     public int totalTokensSold() {

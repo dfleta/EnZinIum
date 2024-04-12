@@ -238,7 +238,7 @@ public class App {
 
         System.out.println("\n" + "Lista de compradores" + "\n" + 
                                   "===================="        );
-        ricknillos.owners();
+        System.out.println(ricknillos.owners());
         
         /**
          * Calcula el numero de asistentes al concierto (excluyendo a Rick),
@@ -311,7 +311,7 @@ public class App {
 
         morty.send(ricknillos, 10d);
 
-        ricknillos.owners();
+        System.out.println(ricknillos.owners());
         System.out.println("Owner: " + rick.getPK().hashCode() + " " 
                                      + ricknillos.balanceOf(rick.getPK())
                                      + " "
