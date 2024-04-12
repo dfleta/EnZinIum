@@ -6,10 +6,10 @@ import java.util.Map;
 
 public class TokenContract {
 
-    private PublicKey ownerPK = null;
-    private Address owner = null;
+    private final PublicKey ownerPK;
+    private final Address owner;
     private String name = null;
-    private String symbol = null;
+    private String symbol = "";
     private double totalSupply = 0d;
     private Double totalTokensSold = 0d;
     private Double tokenPrice = 0d; 
