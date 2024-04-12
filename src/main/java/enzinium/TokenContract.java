@@ -4,6 +4,8 @@ import java.security.PublicKey;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.naming.InsufficientResourcesException;
+
 public class TokenContract {
 
     private final PublicKey ownerPK;
@@ -122,9 +124,10 @@ public class TokenContract {
         }   
     }
 
-    private void require(Boolean holds) throws Exception {
+    void require(Boolean holds) throws InsufficientTokensException {
         if (! holds) {
-            throw new Exception();
+            throw new InsufficientTokensException(
+                "No dispones de tokens suficientes para completar la transaccion.");
         }
     }
 
@@ -156,7 +159,7 @@ public class TokenContract {
             Double units = Math.floor(enziniums / tokenPrice);
             transfer(recipient, units);
             this.owner.transferEZI(enziniums);
-        } catch (Exception e) {
+        } catch (InsufficientTokensException e) {
             // fail silently
         }
     }
