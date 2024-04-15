@@ -123,6 +123,7 @@ public class TokenContract {
     }
 
     void require(Boolean holds) throws InsufficientTokensException {
+        // The great majority of runtime exceptions indicate preconditiom violations
         if (! holds) {
             throw new InsufficientTokensException(
                 "No dispones de tokens suficientes para completar la transaccion.");
@@ -158,7 +159,7 @@ public class TokenContract {
             transfer(recipient, units);
             this.owner.transferEZI(units * tokenPrice);
         } catch (InsufficientTokensException e) {
-            // fail silently
+            // fails silently
         }
     }
 }
