@@ -43,7 +43,7 @@ public class App {
 
         /**
          * Creamos una Address en nuestro sistema para Morty
-         * y otra para Jen y visualizamos su direccion puvlica
+         * y otra para Jen y visualizamos su direccion publica
          * y balance
          */
         

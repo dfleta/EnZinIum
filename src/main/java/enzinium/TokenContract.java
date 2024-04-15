@@ -4,8 +4,6 @@ import java.security.PublicKey;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.naming.InsufficientResourcesException;
-
 public class TokenContract {
 
     private final PublicKey ownerPK;

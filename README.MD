@@ -93,12 +93,12 @@ Todo contrato tiene un propietario.
 * `totalSupply()` devuelve el total de unidades de este token que actualmente existen.
 
 * `addOwner(PublicKey PK, Double units)` añade un propietario a `balances`.
-* `numOwners()` devuelve el numero de propietarios en  `balances`
+* `numOwners()` devuelve el numero de propietarios en `balances`
 * `balanceOf(PublicKey owner)` devuelve el numero de tokens de un propietario.
 * `transfer(PublicKey recipient, Double units)` transfiere tokens del propietario del contrato a la dirección de destino.
 * `transfer(PublicKey sender, PublicKey recipient, Double units)` transfiere tokens del sender al recipient.
 * `require(Boolean holds) throws Exception` lanza una excepción cuando holds es `false`.
-* `owners()` mueestra en consola todos los propietarios.
+* `owners()` muestra en consola todos los propietarios.
 * `payable(PublicKey recipient, Double EnZinIums)` envia los tokens a la direccion recipient y envia los EnZinIums al propietario del contrato.
 
 ### Clase `GenSig`
