@@ -51,10 +51,13 @@ public class TokenContractTest {
         ricknillos.transfer(morty.getPK(), 2d);
         assertEquals(2d, ricknillos.balanceOf(morty.getPK()), 0d);
         assertEquals(98d, ricknillos.balanceOf(rick.getPK()), 0d);
+    }
 
-        // require falla silenciosamente
+    @Test
+    public void transfer_fails_test() {
+        // transfer falla silenciosamente cuando require lanza excepcion
         ricknillos.transfer(morty.getPK(), 500d);
-        assertEquals(2d, ricknillos.balanceOf(morty.getPK()), 0d);   
+        assertEquals(0d, ricknillos.balanceOf(morty.getPK()), 0d);   
     }
 
     @Test
@@ -68,14 +71,22 @@ public class TokenContractTest {
         // verifico la trasnferencia de EZI
         assertEquals(20d, ricknillos.owner().getBalance(), 0d);
 
-        // sin EZI suficiente
-        ricknillos.payable(morty.getPK(), 4d);
-        assertEquals(4d, ricknillos.balanceOf(morty.getPK()), 0d);
-        assertEquals(20d, ricknillos.owner().getBalance(), 0d);
-
         // intento de compra de media entrada
         ricknillos.payable(morty.getPK(), 8d);
+        // numero de entradas de morty
         assertEquals(5d, ricknillos.balanceOf(morty.getPK()), 0d);
-        assertEquals(28d, ricknillos.owner().getBalance(), 0d);
+        // EZIs de rick
+        assertEquals(25d, ricknillos.owner().getBalance(), 0d);
+    }
+
+    @Test
+    public void payable_fails_test() {
+
+        morty.transferEZI(20d);
+
+        // sin EZI suficiente
+        ricknillos.payable(morty.getPK(), 4d);
+        assertEquals(0d, ricknillos.balanceOf(morty.getPK()), 0d);
+        assertEquals(0d, ricknillos.owner().getBalance(), 0d);
     }
 }

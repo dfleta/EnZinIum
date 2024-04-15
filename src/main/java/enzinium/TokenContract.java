@@ -107,7 +107,7 @@ public class TokenContract {
             require(balanceOf(ownerPK) >= units);
             this.getBalances().compute(ownerPK, (pk, tokens) -> tokens - units);
             this.getBalances().put(recipient, balanceOf(recipient) + units);
-        } catch (Exception e) {
+        } catch (InsufficientTokensException e) {
             // fails silently
         }      
     };
@@ -117,7 +117,7 @@ public class TokenContract {
             require(balanceOf(sender) >= units);
             this.getBalances().put(sender, balanceOf(sender) - units);
             this.getBalances().put(recipient, balanceOf(recipient) + units);
-        } catch (Exception e) {
+        } catch (InsufficientTokensException e) {
             // fails silently
         }   
     }
@@ -156,7 +156,7 @@ public class TokenContract {
             require(enziniums >= this.getTokenPrice());
             Double units = Math.floor(enziniums / tokenPrice);
             transfer(recipient, units);
-            this.owner.transferEZI(enziniums);
+            this.owner.transferEZI(units * tokenPrice);
         } catch (InsufficientTokensException e) {
             // fail silently
         }
