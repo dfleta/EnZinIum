@@ -2,13 +2,16 @@
 plugins {
     id 'java'
     id 'application'
+    id 'net.ltgt.errorprone' version "4.0.1"
 }
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 dependencies {
+    errorprone 'com.google.errorprone:error_prone_core:2.28.0'
     testImplementation 'junit:junit:[4.12, )'
 }
 
