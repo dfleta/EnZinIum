@@ -43,7 +43,7 @@ public class App {
 
         /**
          * Creamos una Address en nuestro sistema para Morty
-         * y otra para Jen y visualizamos su direccion puvlica
+         * y otra para Jen y visualizamos su direccion publica
          * y balance
          */
         
@@ -184,7 +184,7 @@ public class App {
         // verifica que require falla si no hay tokens suficientes en el balance de Rick
         ricknillos.transfer(morty.getPK(), 300d);
 
-        System.out.println("Rick no tiene 300 entradas => entradas de Morty: " 
+        System.out.println("Rick no tiene 100 entradas => entradas de Morty: " 
                                 + ricknillos.balanceOf(morty.getPK())
                                 + " "
                                 + ricknillos.symbol());
