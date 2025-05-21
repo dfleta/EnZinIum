@@ -1,6 +1,6 @@
 package enzinium;
 
-/**
+/*
  * Contratos inteligentes con enZinium.
  * 
  * Rick va a organizar un concieto de Los Ricknillos
@@ -20,7 +20,7 @@ public class App {
      
     public static void main( String[] args )
     {
-        /**
+        /*
          * Crea una Address en nuestro sistema para Rick
          * Genera las claves privada y publica de la direccion
          * El balance de enZinium de su direccion es cero
@@ -30,7 +30,7 @@ public class App {
         Address rick = new Address();
         rick.generateKeyPair();
 
-        /**
+        /*
          * Visualiza la direccion publica de Rick y su balance
          * 
          * Utiliza el metodo hashCode() de PublicKey para 
@@ -41,7 +41,7 @@ public class App {
                                   "==============="        );
         System.out.println(rick.toString());
 
-        /**
+        /*
          * Creamos una Address en nuestro sistema para Morty
          * y otra para Jen y visualizamos su direccion publica
          * y balance
@@ -60,7 +60,7 @@ public class App {
                                   "==============="        );
         System.out.println(jen.toString());         
 
-        /**
+        /*
          * Crea una contrato inteligente de tipo TokenContract 
          * en nuestro sistema para que Rick pueda vender 100 
          * entradas para el concierto de "los Ricknillos". 
@@ -95,7 +95,7 @@ public class App {
                                   "=========================="        );
         System.out.println(ricknillos.toString());
 
-        /**
+        /*
          * El contrato TokenContract contiene una tabla de balances 
          * de token por propietario:
          * mapping(propietario => numero de unidades que posee)
@@ -120,7 +120,7 @@ public class App {
         // verifica que Rick no se actualiza una vez que ya existe en el balance
         ricknillos.addOwner(rick.getPK(), 500d);
         
-        /**
+        /*
          * Consulta los balances
          * 
          * numOwners()
@@ -147,7 +147,7 @@ public class App {
                                 + " "
                                 + ricknillos.symbol());
 
-        /**
+        /*
          * Morty quiere comprarle 2 entradas a Rick
          * 
          * transfer()
@@ -197,7 +197,7 @@ public class App {
                                 + " "
                                 + ricknillos.symbol());
 
-        /**
+        /*
          * A veces, hay reventa ;)
          * 
          * Morty le vende 1 entrada a Jen.
@@ -225,7 +225,7 @@ public class App {
                                 + " "
                                 + ricknillos.symbol());
 
-        /**
+        /*
          * Llega el dia del concierto y Rick quiere
          * controlar el acceso a la sala de conciertos.
          * Muestra una lista de compradores con el número de entradas
@@ -240,7 +240,7 @@ public class App {
                                   "===================="        );
         System.out.println(ricknillos.owners());
         
-        /**
+        /*
          * Calcula el numero de asistentes al concierto (excluyendo a Rick),
          * es decir, el numero de entradas vendidas.
          * 
@@ -252,12 +252,12 @@ public class App {
                                     + ricknillos.totalTokensSold() + "\n");
 
         
-        /**
+        /*
          * AHORA A POR EL EXCEL·LENT !!
          * CAN DO !!
          */
 
-        /**
+        /*
          * Vamos a comprar entradas con nuestra moneda enZinium.
          * 
          * Añade 20 enZiniums a la direccion de Morty:
@@ -275,7 +275,7 @@ public class App {
                                   "====================="        );
         System.out.println(morty.toString());
 
-        /** 
+        /* 
          * Morty Compra 2 entradas a 5 enZiniums cada una:
          * envia una transferencia al contrato de ricknillo 
          * por valor de 10 enZiniums:
