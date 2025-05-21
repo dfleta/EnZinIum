@@ -1,5 +1,6 @@
 package enzinium;
 
+import java.nio.charset.Charset;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
@@ -42,8 +43,7 @@ class GenSig {
             // Indicate the message digest algorithm: SHA-1
             Signature signDsa = Signature.getInstance("SHA1withDSA", "SUN");
             signDsa.initSign(sKey);
-            signDsa.update(message.getBytes());
-            // firma de los datos
+            signDsa.update(message.getBytes(Charset.defaultCharset())); 
             byte[] realSig = signDsa.sign();
             return realSig;
 
@@ -67,7 +67,7 @@ class GenSig {
             sig.initVerify(pubKey);
             
             // importar el mensaje
-            sig.update(message.getBytes());
+            sig.update(message.getBytes(Charset.defaultCharset()));
 
             // importar la firma
             boolean verifies = sig.verify(signedMessage);
